@@ -1,0 +1,326 @@
+
+/* -------------------------------------------------------------------------------------------------------------------------- */
+/* 固定資産税・都市計画税自動日割り計算&精算書作成 */ 
+/* -------------------------------------------------------------------------------------------------------------------------- */
+
+/* 背景設定 IE6.7.8レスポンシブ対策 */
+.oldie div#content div#contentInner {
+	width: 1100px;
+}
+.oldie div#content div#contentInner #main {
+	width: 800px;
+}
+
+
+
+
+
+/* 全体共通 calculateFormSec */
+/* -----------------------------------------------------------*/
+
+#calculateFormSec div{
+	border: solid 1px #ccc;
+	border-radius: 6px; /* CSS3 */  
+  -webkit-border-radius: 6px; /* Safari,Google Chrome用 */  
+  -moz-border-radius: 6px; /* Firefox用 */
+  margin-bottom: 20px;
+}
+
+
+/* 背景設定 */
+#calculateInputSec div{
+	background: url(../../cms/wp-content/themes/mymall/img/realestate/calculate/calculateInputSec_bg.png) repeat-y;
+	background-size: contain;
+}
+#calculateOutputSec div{
+	background: url(../../cms/wp-content/themes/mymall/img/realestate/calculate/calculateOutputSec_bg.png) repeat-y;
+	background-size: contain;
+}
+
+
+
+/* イントロ calculateIntro */
+/* -----------------------------------------------------------*/
+#calculateIntro {
+	margin-bottom: 50px;
+}
+
+
+/* 入力フォーム部分 calculateInputSec */
+/* -----------------------------------------------------------*/
+
+/* 入力部分等調整 */
+#calculateInputSec input#buyerName {
+	margin-right: 10px;
+}
+#calculateInputSec label {
+	margin-right: 10px;
+}
+#calculateInputSec label input {
+	margin-right: 5px;
+}
+
+#calculateInputSec h3{
+	background-color: #9CC541;
+	color: #fff;
+	font-size: 14px;
+	font-weight: bold;
+	padding: 5px;
+	text-align: center;
+	margin-bottom: 20px;
+	
+	border-radius: 6px; /* CSS3 */  
+  -webkit-border-radius: 6px; /* Safari,Google Chrome用 */  
+  -moz-border-radius: 6px; /* Firefox用 */
+  margin-bottom: 20px;
+}
+
+#calculateInputSec dl {
+	overflow: hidden;
+	border-top: solid 1px #ccc;
+}
+
+#calculateInputSec dl:first-child {
+	border-top: none;
+}
+
+#calculateInputSec dl dt{
+	float: left;
+	width: 20%;
+	padding: 1% 1.5%;
+	font-weight: bold;
+}
+
+#calculateInputSec dl dt span{
+	border-left: solid 5px #A9CD5A;
+	padding-left: 10px;
+}
+
+#calculateInputSec dl dd{
+	width: 74%;
+	float:left;
+	padding: 1% 1.5%;
+}
+
+/* IE7表示崩れ対策 */
+.ie7 #calculateInputSec dl dd{
+	width: 73%;
+}
+
+/* 税金入力部分 */
+#calculateInputSec div#taxData dl dd.title {
+	background: url(../../cms/wp-content/themes/mymall/img/realestate/calculate/calculateTaxSecTitle_bg.png) repeat-y;
+	background-size: contain;
+}
+
+#calculateInputSec dl dd.title span{
+	font-weight: bold;
+	text-align: center;
+}
+
+#calculateInputSec dl dd.half {
+	background: url(../../cms/wp-content/themes/mymall/img/realestate/calculate/calculateTaxSec_bg.png) repeat-y;
+	background-size: contain;
+	border-radius: 6px; /* CSS3 */  
+  -webkit-border-radius: 6px; /* Safari,Google Chrome用 */  
+  -moz-border-radius: 6px; /* Firefox用 */
+  text-align: right;
+}
+#calculateInputSec dl dd.half span{
+	width: 50%;
+	float: left;
+}
+#calculateInputSec dl dd.half span input{
+	width: 70%;
+}
+
+
+/* 但し書き部分 */
+#calculateInputSec dl#tadashigaki label {
+display: block;
+padding: 3px 0;
+}
+#calculateInputSec dl#tadashigaki input#tadashigaki_year,
+#calculateInputSec dl#tadashigaki input#tadashigaki_moth,
+#calculateInputSec dl#tadashigaki input#tadashigaki_day {
+	width: 40px;
+	text-align: right;
+}
+#calculateInputSec dl#tadashigaki label#freeSpace textarea#tadashigaki_free {
+	width: 90%;
+	margin-left: 18px;
+}
+
+
+
+
+/* フォーム部分 */
+#calculateFormSec #articleData input#buyerName,
+#calculateFormSec #articleData input#venderName {
+	width: 60%;
+}
+#calculateFormSec #articleData input#venderAd {
+	width: 60%;
+}
+#calculateFormSec #articleData textarea#textarea {
+	width: 80%;
+}
+
+
+/* ご利用上の注意事項 */
+div#content div#contentInner div#main section#calculateCaution {
+	margin-bottom: 80px;
+}
+#calculateInputSec #calculateCaution h4{
+	font-size: 14px;
+	font-weight: bold;
+	margin-bottom: 5px;
+}
+#calculateInputSec #calculateCaution p{
+	font-size: 13px;
+}
+
+
+
+
+/* 表示部分 calculateOutputSec */
+/* -----------------------------------------------------------*/
+#calculateOutputSec h3{
+	background-color: #AC955A;
+	color: #fff;
+	font-size: 14px;
+	font-weight: bold;
+	padding: 5px;
+	text-align: center;
+	margin-bottom: 20px;
+	
+	border-radius: 6px; /* CSS3 */  
+  -webkit-border-radius: 6px; /* Safari,Google Chrome用 */  
+  -moz-border-radius: 6px; /* Firefox用 */
+  margin-bottom: 20px;
+}
+
+#calculateOutputSec h4{
+	font-size: 15px;
+	font-weight: bold;
+	margin-bottom: 5px;
+	margin-top: 15px;
+	padding-top: 5px;
+}
+
+
+#calculateOutputSec dl {
+	overflow: hidden;
+	border-top: solid 1px #ccc;
+}
+
+#calculateOutputSec dl:first-child {
+	border-top: none;
+}
+
+#calculateOutputSec dl dt{
+	float: left;
+	width: 20%;
+	padding: 1% 1.5%;
+	font-weight: bold;
+}
+
+#calculateOutputSec dl dt span{
+	border-left: solid 5px #AC955A;
+	padding-left: 10px;
+}
+
+#calculateOutputSec dl dd{
+	width: 74%;
+	float:left;
+	padding: 1% 1.5%;
+}
+
+#calculateOutputSec dl dd.goukei_b{
+	font-weight: bold;
+}
+
+/* IE7表示崩れ対策 */
+.ie7 #calculateOutputSec dl dd{
+	width: 73%;
+}
+
+
+/* 税金表示部分 */
+#calculateOutputSec div#taxDataResult dl dd.title {
+	background: url(../../cms/wp-content/themes/mymall/img/realestate/calculate/calculateTaxSecTitle_bg2.png) repeat-y;
+	background-size: contain;
+}
+#calculateOutputSec dl dd.title span{
+	font-weight: bold;
+	text-align: center;
+}
+#calculateOutputSec dl dd.half {
+	background: url(../../cms/wp-content/themes/mymall/img/realestate/calculate/calculateTaxSec_bg.png) repeat-y;
+	background-size: contain;
+	border-radius: 6px; /* CSS3 */  
+  -webkit-border-radius: 6px; /* Safari,Google Chrome用 */  
+  -moz-border-radius: 6px; /* Firefox用 */
+  text-align: right;
+}
+
+/* 合計金額 */
+#calculateOutputSec dl#taxDataResultTotal dd {
+	font-weight: bold;
+	text-align: right;
+	font-size: 16px;
+}
+
+#calculateOutputSec dl dd.half span{
+	width: 50%;
+	float: left;
+}
+
+
+
+
+
+
+
+/* ボタン部分 */
+/* -----------------------------------------------------------*/
+
+/* 計算ボタン */
+p#submitButtonKeisan {
+	text-align: center;
+}
+p#submitButtonKeisan button {
+	border: none;
+	background: none;
+	padding: 0;
+	cursor: pointer;
+}
+p#submitButtonKeisan button:hover img {
+	background: #FFF; /*bg*/
+	opacity: 0.7; /* alpha */
+	-moz-opacity: 0.7; /*firefox*/
+	filter:alpha(opacity=70);	/*IE*/
+}
+
+/* 精算書作成ボタン */
+p#submitButtonSeisansyo {
+	text-align: center;
+}
+p#submitButtonSeisansyo button {
+	border: none;
+	background: none;
+	padding: 0;
+	cursor: pointer;
+}
+p#submitButtonSeisansyo button:hover img {
+	background: #FFF; /*bg*/
+	opacity: 0.7; /* alpha */
+	-moz-opacity: 0.7; /*firefox*/
+	filter:alpha(opacity=70);	/*IE*/
+}
+
+
+
+
+
+

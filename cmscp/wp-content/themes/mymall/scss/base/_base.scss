@@ -1,0 +1,139 @@
+// ========================================
+// base settings 初期設定たち
+// ========================================
+
+html {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+  font-size: $font-size-default;
+	color: map-get($colors, text);
+}
+body {
+	font-family: $font-family-mincho;
+	line-height: 2;
+  font-size: $font-size-default;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	font-family: $font-family-mincho;
+	color: map-get($colors, text);
+	line-height: 1.2;
+  font-weight: 500;
+}
+
+p {
+	margin: 0;
+	+ p {
+		margin-top: 1em;
+	}
+}
+
+ul, dl, figure {
+	margin: 0;
+	padding: 0;
+}
+
+dt {
+	font-weight: normal;
+}
+
+ul, li {
+	list-style: none;
+}
+
+a {
+	color: map-get($colors, text);
+	transition: .4s;
+	&:before, &:after {
+		transition: .4s;
+	}
+	&:hover {
+		color: map-get($colors, text);
+		text-decoration: none;
+    opacity: .7;
+	}
+}
+
+em {
+  font-style: normal;
+  font-weight: normal;
+  color: inherit;
+}
+
+input,
+select,
+textarea {
+  outline: none;
+  vertical-align: middle;
+  @include font(16);
+}
+
+input:not([type="checkbox"]):not([type="radio"]):not([type="file"]):not([type="hidden"]):not([type="submit"]):not([type="reset"]):not([type="button"]):not([type="image"]),
+select,
+textarea  {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 100%;
+  padding: .4em .7em;
+  border: 1px solid #D1D1D1;
+  box-sizing: border-box;
+  font-family: $font-family-mincho;
+}
+
+button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  outline: none;
+  width: 100%;
+  @include font(15);
+  line-height: 2;
+}
+
+address {
+  margin-bottom: 0;
+}
+
+
+// ========================================
+// UIkit Overwrite UIkitのクラスの上書き
+// ========================================
+
+/* uk-container
+====================================== */
+.uk-container {
+  max-width: $max-width-m;
+  &-small {
+    max-width: $max-width-s;
+  }
+  &-large {
+    max-width: $max-width-l;
+  }
+  &-expand {
+    max-width: none;
+  }
+}
+
+
+// ========================================
+// plugins Overwrite プラグイン上書き
+// ========================================
+
+/* Contact Form 7
+====================================== */
+.wpcf7 {
+  .ajax-loader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+  }
+}
+
+/* reCAPTCHA
+====================================== */
+.grecaptcha-badge {
+  visibility: hidden;
+}

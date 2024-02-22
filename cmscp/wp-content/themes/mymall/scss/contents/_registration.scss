@@ -1,0 +1,12 @@
+#registration-02 {
+	background: url(../img/registration/01.jpg) no-repeat center;
+	background-size: cover;
+	color: map-get($colors, white);
+	.com-tit-04 {
+		color: map-get($colors, white);
+		border-left-color: map-get($colors, white);
+		&:after {
+			border-bottom-color: map-get($colors, white);
+		}
+	}
+}

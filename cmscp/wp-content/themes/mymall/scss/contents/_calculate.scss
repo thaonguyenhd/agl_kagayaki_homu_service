@@ -1,0 +1,222 @@
+#calculate-form {
+	h3 {
+		background-color: #4C8581;
+		color: map-get($colors, white);
+		font-weight: bold;
+		@include font(18);
+		text-align: center;
+		padding: .8em 1em;
+		@include mq-up(s) {
+			@include font(20);
+		}
+	}
+	h4 {
+		@include font(17);
+		margin-top: 35px;
+		margin-bottom: 10px;
+		@include mq-up(s) {
+			@include font(19);
+		}
+	}
+	dl {
+		@include mq-up(s) {
+			display: grid;
+			grid-template-columns: 190px 1fr;
+			grid-gap: 2px;
+			@include font(18);
+		}
+		dt,dd {
+			padding: 20px;
+			@include mq-up(s) {
+				padding: 30px 20px;
+			}
+		}
+		dt {
+			background-color: #E5EDED;
+			padding-left: 32px;
+			position: relative;
+			&:before {
+				content: '';
+				border-left: 5px solid #02655E;
+				height: 26px;
+				position: absolute;
+				left: 16px;
+				top: 23px;
+				@include mq-up(s) {
+					height: 31px;
+					top: 33px;
+				}
+			}
+		}
+		dd {
+			background-color: #F2F6F6;
+			@include mq-up(s) {
+				padding-right: 50px;
+			}
+		}
+		+ dl {
+			margin-top: 20px;
+		}
+	}
+	button {
+		background-image: linear-gradient(to right, #02655E , #013C38);
+		color: map-get($colors, white);
+		@include font(19);
+		text-align: center;
+		padding: 1em;
+		line-height: 1.5;
+		font-family: $font-family-mincho;
+		margin-top: 35px;
+		display: block;
+	    cursor: pointer;
+	    transition: .4s;
+	    position: relative;
+	    @include mq-up(s) {
+	    	@include font(23);
+	    }
+		&:after {
+			content: '';
+			margin-left: .5em;
+			width: 0;
+			height: 0;
+			border-left: 6px solid transparent;
+			border-right: 6px solid transparent;
+			border-top: 10px solid map-get($colors, white);
+			position: absolute;
+		    top: 50%;
+		    transform: translateY(-50%);
+		}
+		&.skin {
+			background-image: linear-gradient(to right, #9A865E , #5D4A24);
+		}
+		&:hover {
+			opacity: .7;
+		}
+	}
+	input:not([type="checkbox"]):not([type="radio"]):not([type="file"]):not([type="hidden"]):not([type="submit"]):not([type="reset"]):not([type="button"]):not([type="image"]),
+	select, textarea {
+		border: 0;
+		padding: .55em 1em;
+		border-radius: 5px;
+	}
+	label {
+		+ label {
+			margin-left: 15px;
+		}
+	}
+	input[type=radio] {
+		margin: -2px 5px 0 0;
+		@include mq-up(s) {
+			margin: -5px 5px 0 0;
+		}
+	}
+	.grid-01 {
+		@include mq-up(s) {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			input:not([type="checkbox"]):not([type="radio"]):not([type="file"]):not([type="hidden"]):not([type="submit"]):not([type="reset"]):not([type="button"]):not([type="image"]),
+			select, textarea {
+				margin-right: 20px;
+				max-width: 479px;
+			}
+		}
+		label {
+			@include mq-down(s) {
+				display: inline-block;
+				margin-top: 5px;
+			}
+		}
+	}
+	.grid-02 {
+		display: flex;
+		align-items: center;
+		input:not([type="checkbox"]):not([type="radio"]):not([type="file"]):not([type="hidden"]):not([type="submit"]):not([type="reset"]):not([type="button"]):not([type="image"]),
+		select, textarea {
+			margin-right: 18px;
+		}
+	}
+	.grid-03 {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		input:not([type="checkbox"]):not([type="radio"]):not([type="file"]):not([type="hidden"]):not([type="submit"]):not([type="reset"]):not([type="button"]):not([type="image"]),
+		select, textarea {
+			margin-right: 10px;
+			text-align: center;
+			@include mq-up(m) {
+				width: 146px;
+			}
+		}
+		div {
+			display: flex;
+			align-items: center;
+			@include mq-down(m) {
+				width: 100%;
+			}
+			+ div {
+				margin-top: 15px;
+				@include mq-up(m) {
+					margin-left: 32px;
+					margin-top: 0;
+				}
+			}
+		}
+	}
+	.grid-04 {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		margin-left: 0;
+		input:not([type="checkbox"]):not([type="radio"]):not([type="file"]):not([type="hidden"]):not([type="submit"]):not([type="reset"]):not([type="button"]):not([type="image"]),
+		select, textarea {
+			margin-top: 5px;
+			margin-right: 10px;
+			text-align: center;
+			@include mq-up(m) {
+				width: 100px;
+			}
+		}
+		input[type=radio] {
+			margin: 2px 5px 0 0;
+		}
+		span {
+			display: flex;
+			align-items: center;
+			@include mq-down(m) {
+				width: 100%;
+				margin-bottom: 5px;
+			}
+			+ span {
+				@include mq-up(m) {
+					margin-left: 15px;
+				}
+			}
+		}
+	}
+	#freeSpace {
+		margin-left: 0;
+		margin-top: 5px;
+	}
+}
+
+#calculate-output {
+	h3 {
+		background-color: #9A865E;
+		margin-top: 80px;
+		@include mq-up(m) {
+			margin-top: 100px;
+		}
+	}
+	dl {
+		dt {
+			background-color: #F1EEE0;
+			&:before {
+				border-left: 5px solid #9A865E;
+			}
+		}
+		dd {
+			background-color: #F6F5ED;
+		}
+	}
+}

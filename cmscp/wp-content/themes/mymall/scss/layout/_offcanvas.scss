@@ -1,0 +1,83 @@
+// ===========================================
+// offcanvas
+// ===========================================
+#offcanvas {
+
+}
+
+.uk-offcanvas-bar {
+	background: #fff;
+	padding: 0;
+}
+
+.uk-nav {
+	.uk-nav-header {
+		background: map-get($colors, main);
+		padding: 5px 15px;
+		color: #fff;
+		@include font(12);
+	}
+	li {
+		border-bottom: 1px solid #DCDCDC;
+		a {
+			display: block;
+			@include font(13);
+			padding: 8px 27px;
+			color: map-get($colors, text);
+			position: relative;
+			background: url(../img/common/ico-page.png) no-repeat 10px center;
+			&:hover {
+				color: map-get($colors, text);
+			}
+		}
+	}
+	.uk-parent {
+		a {
+			&:after, &:before{
+				position: absolute;
+				content: "";
+				font-family: "FontAwesome";
+				font-weight: normal;
+				right: 10px;
+				transition: 0.4s all ease-in-out;
+				width: 15px;
+				height: 2px;
+				top: 50%;
+				transform: translateY(-1px);
+				background: #808080;
+				background-image: none !important;
+			}
+			&:before{
+				transform: rotate(90deg) translateX(-1px);
+			}
+		}
+	}
+	.uk-nav-sub {
+		padding: 0;
+		a {
+			color: map-get($colors, text);
+		}
+		li {
+			background-color: #F2F6F6;
+			border-bottom: 1px solid map-get($colors, white);
+			&:first-child {
+				border-bottom:1px solid map-get($colors, white);
+			}
+			&:last-child {
+				border-bottom: 0;
+			}
+		}
+	}
+}
+.uk-parent.uk-open a:before {
+	content: "";
+	transform: rotate(0) translateY(-1px);
+}
+.uk-offcanvas-bar li:first-child {
+	border-bottom: 0;
+}
+.uk-parent ul.uk-nav-sub a {
+	&:after, &:before {
+		content: none;
+	}
+}

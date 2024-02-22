@@ -1,0 +1,27 @@
+#contact-01 {
+	.tel {
+		line-height: 1.7;
+		font-weight: 500;
+		margin-left: -50px;
+	    > * {
+	        padding-left: 50px;
+	    }
+		> .uk-grid-margin {
+	        margin-top: 15px;
+	    }
+	    img {
+			height: 45px;
+		}
+	    .text {
+	    	@include font(17);
+	    	@include mq-up(s) {
+	    		@include font(20);
+	    	}
+	    }
+	}
+	.com-panel-01 {
+		@include mq-up(s) {
+			padding: 30px;
+		}
+	}
+}

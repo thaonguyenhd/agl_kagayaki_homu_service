@@ -1,0 +1,10 @@
+/* プリント時ボタンを消す */
+
+
+#pagePrint{
+	display: none;
+}
+
+div#content {
+border: none;
+}

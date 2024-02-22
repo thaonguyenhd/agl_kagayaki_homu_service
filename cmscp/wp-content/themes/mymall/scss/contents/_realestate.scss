@@ -1,0 +1,116 @@
+.realestate-panel-01 {
+	@include font(17);
+	line-height: 1.7;
+	@include mq-up(s) {
+		@include font(20);
+	}
+	dt, dd {
+		padding-left: 40px;
+		position: relative;
+		&:before {
+			position: absolute;
+			left: 0;
+			@include font(25);
+			line-height: 1;
+			@include mq-up(s) {
+				@include font(30);
+			}
+		}
+	}
+	dt {
+		&:before {
+			content: 'Q';
+			color: #9A865E;
+		}
+	}
+	dd {
+		&:before {
+			content: 'A';
+			color: #02655E;
+		}
+	}
+}
+
+.realestate-panel-02 {
+	box-shadow: 0 0 10px rgba(0,0,0,.28);
+	padding: 30px 30px 60px;
+	position: relative;
+	@include mq-up(m) {
+		padding: 35px 40px;
+	}
+	&:before {
+		content: '';
+		position: absolute;
+		width: 148px;
+		border-bottom: 1px solid map-get($colors, main);
+		bottom: 24px;
+		right: 27px;
+		@include mq-up(m) {
+			width: 208px;
+		}
+	}
+	&:after {
+		content: '';
+		width: 20px;
+		border-bottom: 1px solid map-get($colors, main);
+		position: absolute;
+		right: 24px;
+	    bottom: 30px;
+	    transform: rotateZ(41deg);
+	}
+	.tit {
+		@include font(23);
+		color: #02655E;
+		line-height: 1.5;
+		margin-bottom: 5px;
+		@include mq-up(m) {
+			@include font(29);
+		}
+		span {
+			color: #9A865E;
+		}
+	}
+	.text {
+		@include font(15);
+		color: #02655E;
+		@include mq-up(m) {
+			@include font(17);
+		}
+	}
+}
+
+.realestate-list-01 {
+	padding: 30px;
+	background-color: #F2F6F6;
+	@include mq-up(s) {
+		padding: 40px;
+	}
+	@include mq-up(m) {
+		padding: 40px 60px;
+	}
+	span {
+		@include font(17);
+		line-height: 1.5;
+		display: block;
+		position: relative;
+		padding-left: 25px;
+		@include mq-up(m) {
+			@include font(20);
+			padding-left: 30px;
+		}
+		&:before {
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 4px;
+			background: url(../img/common/checked.png) no-repeat;
+			background-size: 100% 100%;
+			width: 20px;
+			height: 20px;
+			@include mq-up(m) {
+				width: 24px;
+				height: 24px;
+			}
+		}
+	}
+}

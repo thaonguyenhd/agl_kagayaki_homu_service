@@ -1,0 +1,273 @@
+/* 精算書ページ用 */
+body {
+	font-size: 14px;
+}
+p {
+	margin-top: 0;
+}
+
+a.com-btn-01 {
+	display: inline-block;
+	position: relative;
+	min-width: 168px;
+	font-weight: 500;
+	border-bottom: 1px solid #00524c;
+	padding-right: 40px;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	color: #00524c;
+}
+a.com-btn-01:hover {
+	color: #00524c;
+	text-decoration: none;
+}
+@media(min-width: 640px) {
+	a.com-btn-01{
+		min-width: 208px;
+		font-size: 19px;
+		font-size: 1.1875rem;
+	}
+}
+a.com-btn-01:after{
+	content: "";
+	width: 15px;
+	border-bottom: 1px solid #00524c;
+	position: absolute;
+	right: -1px;
+	bottom: 4px;
+	-webkit-transform: rotateZ(41deg);
+	transform: rotateZ(41deg);
+}
+@media(min-width: 640px){
+	a.com-btn-01:after{
+		width: 20px;
+		bottom: 6px;
+	}
+}
+
+div#content {
+	width: 700px;
+	border: solid 1px #ccc;
+	padding: 10px 20px 20px 20px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+div#content div#contentInner div#main  {
+	width: 100%;
+}
+
+
+
+
+/* 全体共通設定 */
+
+div#content div#contentInner div#main #calculateOutputSec {
+	margin-bottom: 0;
+}
+
+#calculateFormSec {
+	font-size: 13px;
+}
+div#content div#contentInner div#main #calculateFormSec p{
+	margin-bottom: 0;
+	line-height: 1.8em;
+}
+
+
+/* hタイトル */
+#calculateFormSec h3{
+	text-align: center;
+	font-size: 21px;
+	margin-bottom: 20px;
+}
+
+#calculateFormSec h4{
+	margin-bottom: 5px;
+	font-size: 15px;
+}
+
+
+
+/* 物件 articleDataResult */
+#articleDataResult {
+	margin-bottom: 25px;
+}
+
+#articleDataResult p {
+	padding-left: 20px;
+}
+
+
+
+/* 固定資産税・都市計画税 taxDataResult */
+#taxDataResult {
+	margin-bottom: 25px;
+}
+#taxDataResult table {
+	width: 100%;
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+#taxDataResult table th,
+#taxDataResult table td{
+	border: solid 1px #999999;
+	padding: 10px 10px 10px 10px;
+}
+#taxDataResult table th{
+	text-align: left;
+	width: 30%;
+}
+#taxDataResult table th.title{
+	text-align: center;
+}
+
+#taxDataResult table td{
+	text-align: right;
+}
+
+#taxDataResult table td.goukei_b{
+font-weight: bold;
+}
+
+
+
+
+/* 日数負担分 dateDataResult */
+#dateDataResult {
+	margin-bottom: 25px;
+}
+#dateDataResult p {
+	padding-left: 20px;
+}
+
+
+
+
+/* 計算式及び税金の負担額 futanResult */
+#futanResult {
+	margin-bottom: 35px;
+}
+#futanResult p {
+	padding-left: 20px;
+}
+
+
+
+
+
+
+
+
+/* 領収書部分 printSec */
+div#content div#contentInner div#main #printSec {
+	border-top: solid 1px #999999;
+	padding-top: 35px;
+	margin-bottom: 70px;
+}
+
+div#printSec h3 {
+	margin-bottom: 20px;
+}
+
+
+/* 買主 articleDataPrint */
+#articleDataPrint {
+	margin-bottom: 20px;
+}
+#articleDataPrint p span {
+	font-size: 14px;
+}
+#articleDataPrint p {
+	font-size: 18px;
+	border-bottom: solid 1px #999;
+	display: inline;
+	padding: 0 10px 0 0;
+}
+
+
+/* 価格 taxDataPrint */
+#taxDataPrint {
+	margin-bottom: 20px;
+	text-align: center;
+}
+#taxDataPrint p#kainusiTax {
+	font-size: 23px;
+	border: dotted 1px #999;
+	width: 420px;
+	margin: 0 auto;
+}
+#taxDataPrint p#Hosoku {
+	font-size: 12px;
+	text-align: left;
+	width: 420px;
+	margin: 6px auto 0 auto;
+}
+
+
+
+/* 領収 RyousyuPrint */
+#RyousyuPrint {
+	margin-bottom: 20px;
+	text-align: center;
+}
+#RyousyuPrint span{
+	padding-right: 40px;
+}
+
+
+
+/* 売主データ venderPrint */
+#venderPrint {
+	margin-bottom: 20px;
+	padding-left: 350px;
+}
+
+#venderPrint #venderAdressPrint{
+	text-indent: -7em;
+}
+
+#venderPrint #venderNamePrint{
+	text-indent: -3em;
+	margin-top: 20px;
+}
+
+/* 印マーク */
+#venderPrint #venderSeal{
+	text-align: right;
+	float: right;
+}
+
+
+/* プリントボタン #pagePrint */
+#pagePrint {
+	border-top:1px dotted #ccc;
+	padding-top: 20px; 
+}
+
+#pagePrint p{
+	text-align: center;
+}
+
+#pagePrint ul li.pagePrintLeft{
+	float: left;
+	width: 48%;
+}
+#pagePrint ul li.pagePrintRight{
+	float: right;
+	width: 48%;
+}
+
+#pagePrint ul li a {
+	display: block;
+}
+
+
+/* 注意文 */
+div#content div#contentInner div#main #calculateFormSec p#chuibun {
+	text-align: left;
+	font-size: 12px;
+	margin-bottom: 20px;
+	letter-spacing: -0.3px;
+}
+

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="30" height="31" viewBox="0 0 30 31">
+  <g id="Group_332" data-name="Group 332" transform="translate(-337 -11)">
+    <g id="bar" transform="translate(327 -2)">
+      <rect id="bar-2" data-name="bar" width="26" height="2" transform="translate(12 13)" fill="#222"/>
+      <rect id="bar-3" data-name="bar" width="26" height="2" transform="translate(12 20)" fill="#222"/>
+      <rect id="bar-4" data-name="bar" width="26" height="2" transform="translate(12 27)" fill="#222"/>
+    </g>
+    <text id="メニュー" transform="translate(352 40)" fill="#222" font-size="7" font-family="NotoSansJP-Medium, Noto Sans JP" font-weight="500" letter-spacing="0.05em"><tspan x="-14.525" y="0">メニュー</tspan></text>
+  </g>
+</svg>

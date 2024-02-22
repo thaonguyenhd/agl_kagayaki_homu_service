@@ -1,0 +1,5 @@
+.case-img-01 {
+	@include mq-up('m') {
+		max-width: 40%;
+	}
+}

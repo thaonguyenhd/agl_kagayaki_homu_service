@@ -1,0 +1,46 @@
+@use "sass:math";
+// ========================================
+// mixin ミックスイン
+// ========================================
+
+/* media query
+====================================== */
+@mixin mq-up($breakpoint: 'm') {
+  @media (min-width: map-get($breakpoint-up, $breakpoint)) {
+    @content;
+  }
+}
+@mixin mq-down($breakpoint: 'm') {
+  @media (max-width: map-get($breakpoint-down, $breakpoint)) {
+    @content;
+  }
+}
+
+/* font-size フォントサイズのrem表示用
+====================================== */
+@mixin font($size: strip-unit($font-size-default), $lh: null) {
+  font-size: $size + px;
+  font-size: math.div($size, strip-unit($font-size-default)) * 1rem;
+  @if $lh != null {
+    line-height: $lh / $size;
+  }
+}
+
+/* Margin class in 5px steps
+/* 余白調整用のクラス　5px刻みで20回処理を繰り返し
+====================================== */
+@for $i from 0 through 20 {
+	.mt#{$i * 5} { margin-top: 5px * $i !important; }
+	.mb#{$i * 5} { margin-bottom: 5px * $i !important; }
+  .pt#{$i * 5} { padding-top: 5px * $i !important; }
+  .pb#{$i * 5} { padding-bottom: 5px * $i !important; }
+}
+
+@each $color-name, $color-value in $colors {
+  .com-txt-color-#{'' + $color-name} {
+    color: #{$color-value} !important;
+  }
+  .com-bg-#{'' + $color-name} {
+    background-color: #{$color-value} !important;
+  }
+}
