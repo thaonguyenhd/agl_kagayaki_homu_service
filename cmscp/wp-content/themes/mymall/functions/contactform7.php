@@ -4,7 +4,7 @@ add_filter( 'wpcf7_load_js', '__return_false' );
 add_filter( 'wpcf7_load_css', '__return_false' );
 
 function get_form_page_slug(){
-  $form_page_slug = array( 'contact', 'inquiry', 'reservation', 'entry');
+  $form_page_slug = array( 'contact', 'inquiry', 'reservation', 'entry', 'reviews-form');
   return $form_page_slug;
 }
 
@@ -89,3 +89,55 @@ function filter_wpcf7_form_tag( $scanned_tag, $replace ) {
   return $scanned_tag;
 };
 add_filter( 'wpcf7_form_tag', 'filter_wpcf7_form_tag', 11, 2 );
+
+// Create comment when send mail
+add_action( 'wpcf7_before_send_mail', 'add_comment_cf7'); 
+function add_comment_cf7( $contact_form ) { 
+    $submission = WPCF7_Submission::get_instance();
+	$contact_form_id = $contact_form->id;
+    if ( $submission && $contact_form_id == 272 ) {
+        
+        $posted_data = $submission->get_posted_data();
+		
+        $full_name = $posted_data['full-name']; 
+		$type_service = $posted_data['type-service']; 
+		$customer_age = $posted_data['age'];
+		$prefectures = $posted_data['prefectures'];
+		$rating = $posted_data['rating'];
+		$comment = $posted_data['comment'];
+        // $current_post_id = $submission->get_meta('container_post_id');
+        
+        $new_post = array(
+			'post_type' => 'reviews',
+			'post_title' => $rating.'/5スタート - '.$full_name,
+			'post_content' => $comment,
+			'post_status' => 'draft',
+			'post_author' => 2
+		);
+
+		$post_id = wp_insert_post( $new_post );
+
+		$data = array(
+			'type-service' => $type_service,
+			'full-name' => $full_name,
+			'age' => $customer_age,
+			'prefectures' => $prefectures,
+			'rating' => $rating,
+			'comment' => $comment,
+		);
+		update_field('infor',$data,$post_id);
+
+		$new_reviews = get_permalink($post_id);
+
+		// Got e-mail text
+		$mail = $WPCF7_ContactForm->prop( 'mail' );
+    
+		// Replace "[s2-name]" field inside e-mail text
+		$new_mail = str_replace( '[new_reviews]', $new_reviews, $mail );
+
+		// Set
+		$WPCF7_ContactForm->set_properties( array( 'mail' => $new_mail ) );
+            
+		return $WPCF7_ContactForm;
+    }
+}
