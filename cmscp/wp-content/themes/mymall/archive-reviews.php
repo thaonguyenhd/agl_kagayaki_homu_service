@@ -19,7 +19,7 @@
 						<div class="head uk-grid-small uk-flex-middle uk-flex-between" uk-grid>
 							<div>
 								<div class="form-range-01">
-									<input type="range" value="<?= $infor['rating'] ?>" max="5" disabled>
+									<input type="range" value="<?= $infor['rating'] ?>" min="1" max="5" disabled>
 								</div>
 							</div>
 							<div>

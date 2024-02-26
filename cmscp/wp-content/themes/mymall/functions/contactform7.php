@@ -130,7 +130,7 @@ function add_comment_cf7( $contact_form ) {
 		$name_data = $posted_data['new_review'];
     
 		// Do my code with this name
-		$changed_name = home_url().'/cmscp/wp-admin/post.php?post='.$post_id.'&action=edit';
+		$changed_name = get_edit_post_link($post_id);
 
 		// Got e-mail text
 		$mail = $contact_form->prop( 'mail' );
