@@ -2927,7 +2927,7 @@ input[type="checkbox"] {
   color: #333;
   padding: 20px;
   @include mq-up() {
-    padding: 40px 30px 30px;
+    padding: 40px 30px 25px;
   }
   .head {
     margin-bottom: 30px;
@@ -2948,6 +2948,7 @@ input[type="checkbox"] {
 	}
   .infor {
     @include font(12);
+    line-height: 1.2;
     @include mq-up() {
       @include font(16);
     }

@@ -5924,7 +5924,7 @@ input[type=checkbox] label {
 }
 @media (min-width: 960px) {
   .review-panel-01 {
-    padding: 40px 30px 30px;
+    padding: 40px 30px 25px;
   }
 }
 .review-panel-01 .head {
@@ -5951,6 +5951,7 @@ input[type=checkbox] label {
 .review-panel-01 .infor {
   font-size: 12px;
   font-size: 0.75rem;
+  line-height: 1.2;
 }
 @media (min-width: 960px) {
   .review-panel-01 .infor {
