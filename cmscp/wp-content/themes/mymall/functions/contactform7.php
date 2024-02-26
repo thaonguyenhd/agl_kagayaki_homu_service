@@ -95,7 +95,7 @@ add_action( 'wpcf7_before_send_mail', 'add_comment_cf7');
 function add_comment_cf7( $contact_form ) { 
     $submission = WPCF7_Submission::get_instance();
 	$contact_form_id = $contact_form->id;
-    if ( $submission && $contact_form_id == 272 ) {
+    if ( $submission && $contact_form_id == 277 ) {
         
         $posted_data = $submission->get_posted_data();
 		
@@ -119,7 +119,6 @@ function add_comment_cf7( $contact_form ) {
 
 		$data = array(
 			'type-service' => $type_service,
-			'full-name' => $full_name,
 			'age' => $customer_age,
 			'prefectures' => $prefectures,
 			'rating' => $rating,
@@ -127,17 +126,21 @@ function add_comment_cf7( $contact_form ) {
 		);
 		update_field('infor',$data,$post_id);
 
-		$new_reviews = get_permalink($post_id);
+		// Got name data
+		$name_data = $posted_data['new_review'];
+    
+		// Do my code with this name
+		$changed_name = home_url().'/cmscp/wp-admin/post.php?post='.$post_id.'&action=edit';
 
 		// Got e-mail text
-		$mail = $WPCF7_ContactForm->prop( 'mail' );
-    
+		$mail = $contact_form->prop( 'mail' );
+
 		// Replace "[s2-name]" field inside e-mail text
-		$new_mail = str_replace( '[new_reviews]', $new_reviews, $mail );
+		$new_mail = str_replace( '[new_review]', $changed_name, $mail );
 
 		// Set
-		$WPCF7_ContactForm->set_properties( array( 'mail' => $new_mail ) );
-            
-		return $WPCF7_ContactForm;
+		$contact_form->set_properties( array( 'mail' => $new_mail ) );
+		
+		return $contact_form;
     }
 }
