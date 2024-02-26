@@ -2925,6 +2925,10 @@ input[type="checkbox"] {
 
 .review-panel-01 {
   color: #333;
+  padding: 20px;
+  @include mq-up() {
+    padding: 40px 30px 30px;
+  }
   .head {
     margin-bottom: 30px;
   }
@@ -2943,9 +2947,9 @@ input[type="checkbox"] {
     }
 	}
   .infor {
-    @include font(10);
+    @include font(12);
     @include mq-up() {
-      @include font(12);
+      @include font(16);
     }
   }
   .type {
@@ -2956,7 +2960,7 @@ input[type="checkbox"] {
       display: inline-block;
       @include font(16);
       background-color: #F1EEE0;
-      padding: .5em .6em;
+      padding: 7px 9px;
       line-height: 1;
     }
   }

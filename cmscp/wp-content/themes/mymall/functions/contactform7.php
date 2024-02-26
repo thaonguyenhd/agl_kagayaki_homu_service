@@ -4,7 +4,7 @@ add_filter( 'wpcf7_load_js', '__return_false' );
 add_filter( 'wpcf7_load_css', '__return_false' );
 
 function get_form_page_slug(){
-  $form_page_slug = array( 'contact', 'inquiry', 'reservation', 'entry', 'reviews-form');
+  $form_page_slug = array( 'contact', 'inquiry', 'reservation', 'entry', 'review-form');
   return $form_page_slug;
 }
 

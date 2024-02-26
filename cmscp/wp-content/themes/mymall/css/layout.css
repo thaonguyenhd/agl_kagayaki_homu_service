@@ -5920,6 +5920,12 @@ input[type=checkbox] label {
 
 .review-panel-01 {
   color: #333;
+  padding: 20px;
+}
+@media (min-width: 960px) {
+  .review-panel-01 {
+    padding: 40px 30px 30px;
+  }
 }
 .review-panel-01 .head {
   margin-bottom: 30px;
@@ -5943,13 +5949,13 @@ input[type=checkbox] label {
   }
 }
 .review-panel-01 .infor {
-  font-size: 10px;
-  font-size: 0.625rem;
+  font-size: 12px;
+  font-size: 0.75rem;
 }
 @media (min-width: 960px) {
   .review-panel-01 .infor {
-    font-size: 12px;
-    font-size: 0.75rem;
+    font-size: 16px;
+    font-size: 1rem;
   }
 }
 .review-panel-01 .type {
@@ -5962,7 +5968,7 @@ input[type=checkbox] label {
   font-size: 16px;
   font-size: 1rem;
   background-color: #F1EEE0;
-  padding: 0.5em 0.6em;
+  padding: 7px 9px;
   line-height: 1;
 }
 .review-panel-01 .time {
