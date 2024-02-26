@@ -125,9 +125,6 @@ function add_comment_cf7( $contact_form ) {
 			'comment' => $comment,
 		);
 		update_field('infor',$data,$post_id);
-
-		// Got name data
-		$name_data = $posted_data['new_review'];
     
 		// Do my code with this name
 		$changed_name = get_edit_post_link($post_id);

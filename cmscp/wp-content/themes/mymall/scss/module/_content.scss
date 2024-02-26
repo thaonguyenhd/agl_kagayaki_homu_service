@@ -2670,9 +2670,10 @@
   --dir: right;
   --fill: #C1A371;
   --fillbg: rgba(100, 100, 100, 0.15);
+  --star: url(../img/common/star.svg);
   --stars: 4;
   --starsize: 3rem;
-  --symbol: url(../img/common/star.svg);
+  --symbol: var(--star);
   --value: 1;
   --w: calc(var(--stars) * var(--starsize));
   --x: calc(100% * (var(--value) / var(--stars)));
@@ -2696,6 +2697,11 @@
 			block-size: 100%;
 			mask: repeat left center/var(--starsize) var(--symbol);
 		}
+    &::-moz-range-progress {
+			background: var(--fill);
+			block-size: 100%;
+			mask: repeat left center/var(--starsize) var(--star);
+		}
 		&::-webkit-slider-runnable-track {
 			background: var(--fillbg);
 			block-size: 100%;
@@ -2708,18 +2714,14 @@
 			width: var(--starsize);
 		}
 		&::-webkit-slider-thumb {
-			height: var(--starsize);
-			width: 1px;
-			opacity: 1;
-			-webkit-appearance: none;
 			background-color: var(--fill);
-			box-shadow: calc(0rem - var(--w)) 0 0 var(--w) var(--fill);
+      height: var(--starsize);
+      opacity: 1;
+      width: 1px;
+      -webkit-appearance: none;
+      box-shadow: calc(0rem - var(--w)) 0 0 var(--w) var(--fill);
 		}
-		&::-moz-range-progress {
-			background: var(--fill);
-			block-size: 100%;
-			mask: repeat left center/var(--starsize) var(--star);
-		}
+		
 	}
 }
 
