@@ -14,7 +14,7 @@
 <?php while ( have_posts() ): the_post(); ?>
 				<li>
 					<?php $infor = get_field('infor'); ?>
-					<div class="inheritance-panel-01 reviews-panel-01">
+					<div class="inheritance-panel-01 review-panel-01">
 						<h4 class="type"><?= $infor['type-service'] ?></h4>
 						<div class="head uk-grid-small uk-flex-middle uk-flex-between" uk-grid>
 							<div>

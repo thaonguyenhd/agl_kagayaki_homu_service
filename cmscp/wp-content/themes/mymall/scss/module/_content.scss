@@ -1242,6 +1242,12 @@
       }
     }
   }
+  .notice {
+    display: block;
+    @include font(14);
+    margin-top: 20px;
+
+  }
   > dd {
     padding-bottom: 2em;
     @include mq-up(s) {
@@ -2692,6 +2698,7 @@
 		touch-action: manipulation;
 		-webkit-appearance: none;
 		display: block;
+    margin: 0;
 		&::-moz-range-track {
 			background: var(--fillbg);
 			block-size: 100%;
@@ -2820,53 +2827,6 @@ input[type="checkbox"] {
   border-bottom: 1px solid #989898;
 }
 
-.reviews-panel-01 {
-	.form-range-01 {
-		--starsize: 2rem;
-	}
-	.type,.head,.infor {
-		margin-bottom: 15px;
-	}
-	.date,.infor {
-		@include font(14);
-		letter-spacing: 0.05em;
-		@include mq-up() {
-			@include font(16);
-		}
-	}
-	.type {
-		@include font(18);
-		letter-spacing: 0.1em;
-		font-weight: 500;
-		@include mq-up() {
-			@include font(20);
-		}
-	}
-	.infor {
-		& > li {
-			&::before {
-				content: "";
-				font-family: "Font Awesome 5 Free";
-				font-weight: 900;
-				display: inline-block;
-				margin-right: 5px;
-				color: #9a865e;
-			}
-		}
-		.prefectures {
-			&::before {
-				content: "\f3c5";
-			}
-		}
-		.age {
-			&::before {
-				content: "\f007";
-			}
-		}
-	}
-}
-
-
 // Side by side 横並び調整用
 .wpcf7-radio,
 .wpcf7-checkbox {
@@ -2962,50 +2922,44 @@ input[type="checkbox"] {
   border-bottom: 1px solid #989898;
 }
 
-.reviews-panel-01 {
+.review-panel-01 {
+  color: #333;
+  .head {
+    margin-bottom: 30px;
+  }
+  .image {
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    width: 45px;
+    @include mq-up() {
+      width: 90px;
+    }
+  }
 	.form-range-01 {
-		input[type="range"] {
-			--starsize: 2rem;
-		}
+		--starsize: 1.5rem;
+    @include mq-up() {
+      --starsize: 2rem;
+    }
 	}
-	.type,.head,.infor {
-		margin-bottom: 15px;
-	}
-	.date,.infor {
-		@include font(14);
-		letter-spacing: 0.05em;
-		@include mq-up() {
-			@include font(16);
-		}
-	}
-	.type {
-		@include font(18);
-		letter-spacing: 0.1em;
-		font-weight: 500;
-		@include mq-up() {
-			@include font(20);
-		}
-	}
-	.infor {
-		& > li {
-			&::before {
-				content: "";
-				font-family: "Font Awesome 5 Free";
-				font-weight: 900;
-				display: inline-block;
-				margin-right: 5px;
-				color: #9a865e;
-			}
-		}
-		.prefectures {
-			&::before {
-				content: "\f3c5";
-			}
-		}
-		.age {
-			&::before {
-				content: "\f007";
-			}
-		}
-	}
+  .infor {
+    @include font(10);
+    @include mq-up() {
+      @include font(12);
+    }
+  }
+  .type {
+    gap: .6em;
+    margin-bottom: 20px;
+    color: #222;
+    span {
+      display: inline-block;
+      @include font(16);
+      background-color: #F1EEE0;
+      padding: .5em .6em;
+      line-height: 1;
+    }
+  }
+  .time {
+    @include font(16);
+  }
 }

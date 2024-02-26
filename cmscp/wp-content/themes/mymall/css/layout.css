@@ -4070,6 +4070,12 @@ address {
     top: 38px;
   }
 }
+.form-table-01 .notice {
+  display: block;
+  font-size: 14px;
+  font-size: 0.875rem;
+  margin-top: 20px;
+}
 .form-table-01 > dd {
   padding-bottom: 2em;
 }
@@ -5703,6 +5709,7 @@ address {
   touch-action: manipulation;
   -webkit-appearance: none;
   display: block;
+  margin: 0;
 }
 .form-range-01 input[type=range]::-moz-range-track {
   background: var(--fillbg);
@@ -5822,50 +5829,6 @@ input[type=checkbox] label {
   border-bottom: 1px solid #989898;
 }
 
-.reviews-panel-01 .form-range-01 {
-  --starsize: 2rem;
-}
-.reviews-panel-01 .type, .reviews-panel-01 .head, .reviews-panel-01 .infor {
-  margin-bottom: 15px;
-}
-.reviews-panel-01 .date, .reviews-panel-01 .infor {
-  font-size: 14px;
-  font-size: 0.875rem;
-  letter-spacing: 0.05em;
-}
-@media (min-width: 960px) {
-  .reviews-panel-01 .date, .reviews-panel-01 .infor {
-    font-size: 16px;
-    font-size: 1rem;
-  }
-}
-.reviews-panel-01 .type {
-  font-size: 18px;
-  font-size: 1.125rem;
-  letter-spacing: 0.1em;
-  font-weight: 500;
-}
-@media (min-width: 960px) {
-  .reviews-panel-01 .type {
-    font-size: 20px;
-    font-size: 1.25rem;
-  }
-}
-.reviews-panel-01 .infor > li::before {
-  content: "";
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-  display: inline-block;
-  margin-right: 5px;
-  color: #9a865e;
-}
-.reviews-panel-01 .infor .prefectures::before {
-  content: "\f3c5";
-}
-.reviews-panel-01 .infor .age::before {
-  content: "\f007";
-}
-
 .wpcf7-radio,
 .wpcf7-checkbox {
   margin-left: -2em;
@@ -5954,47 +5917,55 @@ input[type=checkbox] label {
   border-bottom: 1px solid #989898;
 }
 
-.reviews-panel-01 .form-range-01 input[type=range] {
-  --starsize: 2rem;
+.review-panel-01 {
+  color: #333;
 }
-.reviews-panel-01 .type, .reviews-panel-01 .head, .reviews-panel-01 .infor {
-  margin-bottom: 15px;
+.review-panel-01 .head {
+  margin-bottom: 30px;
 }
-.reviews-panel-01 .date, .reviews-panel-01 .infor {
-  font-size: 14px;
-  font-size: 0.875rem;
-  letter-spacing: 0.05em;
-}
-@media (min-width: 960px) {
-  .reviews-panel-01 .date, .reviews-panel-01 .infor {
-    font-size: 16px;
-    font-size: 1rem;
-  }
-}
-.reviews-panel-01 .type {
-  font-size: 18px;
-  font-size: 1.125rem;
-  letter-spacing: 0.1em;
-  font-weight: 500;
+.review-panel-01 .image {
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  width: 45px;
 }
 @media (min-width: 960px) {
-  .reviews-panel-01 .type {
-    font-size: 20px;
-    font-size: 1.25rem;
+  .review-panel-01 .image {
+    width: 90px;
   }
 }
-.reviews-panel-01 .infor > li::before {
-  content: "";
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
+.review-panel-01 .form-range-01 {
+  --starsize: 1.5rem;
+}
+@media (min-width: 960px) {
+  .review-panel-01 .form-range-01 {
+    --starsize: 2rem;
+  }
+}
+.review-panel-01 .infor {
+  font-size: 10px;
+  font-size: 0.625rem;
+}
+@media (min-width: 960px) {
+  .review-panel-01 .infor {
+    font-size: 12px;
+    font-size: 0.75rem;
+  }
+}
+.review-panel-01 .type {
+  gap: 0.6em;
+  margin-bottom: 20px;
+  color: #222;
+}
+.review-panel-01 .type span {
   display: inline-block;
-  margin-right: 5px;
-  color: #9a865e;
+  font-size: 16px;
+  font-size: 1rem;
+  background-color: #F1EEE0;
+  padding: 0.5em 0.6em;
+  line-height: 1;
 }
-.reviews-panel-01 .infor .prefectures::before {
-  content: "\f3c5";
-}
-.reviews-panel-01 .infor .age::before {
-  content: "\f007";
+.review-panel-01 .time {
+  font-size: 16px;
+  font-size: 1rem;
 }
 /*# sourceMappingURL=layout.css.map */
