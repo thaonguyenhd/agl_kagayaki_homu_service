@@ -105,7 +105,6 @@ function add_comment_cf7( $contact_form ) {
         
         $posted_data = $submission->get_posted_data();
 		
-        $full_name = $posted_data['full-name']; 
 		$type_service = $posted_data['type-service']; 
 		$customer_age = $posted_data['age'];
 		$prefectures = $posted_data['prefectures'];
@@ -114,8 +113,8 @@ function add_comment_cf7( $contact_form ) {
         // $current_post_id = $submission->get_meta('container_post_id');
         
         $new_post = array(
-			'post_type' => 'reviews',
-			'post_title' => $rating.'/5スタート - '.$full_name,
+			'post_type' => 'review',
+			'post_title' => $rating.'/5★',
 			'post_content' => $comment,
 			'post_status' => 'draft',
 			'post_author' => 2
@@ -123,14 +122,10 @@ function add_comment_cf7( $contact_form ) {
 
 		$post_id = wp_insert_post( $new_post );
 
-		$data = array(
-			'type-service' => $type_service,
-			'age' => $customer_age,
-			'prefectures' => $prefectures,
-			'rating' => $rating,
-			'comment' => $comment,
-		);
-		update_field('infor',$data,$post_id);
+		update_field('reviews_type',$type_service,$post_id);
+		update_field('reviews_age',$customer_age,$post_id);
+		update_field('reviews_pref',$prefectures,$post_id);
+		update_field('reviews_rating',$rating,$post_id);
 
 		
 		 // Got name data
