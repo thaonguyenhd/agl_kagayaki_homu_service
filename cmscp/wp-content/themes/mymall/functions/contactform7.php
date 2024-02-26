@@ -126,18 +126,21 @@ function add_comment_cf7( $contact_form ) {
 		);
 		update_field('infor',$data,$post_id);
     
-		// Do my code with this name
-		$changed_name = get_edit_post_link($post_id);
-
-		// Got e-mail text
-		$mail = $contact_form->prop( 'mail' );
-
-		// Replace "[s2-name]" field inside e-mail text
-		$new_mail = str_replace( '[new_review]', $changed_name, $mail );
-
-		// Set
-		$contact_form->set_properties( array( 'mail' => $new_mail ) );
-		
-		return $contact_form;
+		 // Got name data
+		 $name_data = $posted_data['new_review'];
+    
+		 // Do my code with this name
+		 $changed_name = get_admin_url().'/post.php?post='.$post_id.'&action=edit';
+ 
+		 // Got e-mail text
+		 $mail = $contact_form->prop( 'mail' );
+ 
+		 // Replace "[new_review]" field inside e-mail text
+		 $new_mail = str_replace( '[new_review]', $changed_name, $mail );
+ 
+		 // Set
+		 $contact_form->set_properties( array( 'mail' => $new_mail ) );
+		 
+		 return $contact_form;
     }
 }
