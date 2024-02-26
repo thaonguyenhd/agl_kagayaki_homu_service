@@ -1,10 +1,24 @@
 <section id="inheritance-05" class="com-sec-01">
 	<div class="uk-container">
 		<div class="inner">
-			<?php $title = is_parent_slug('inheritance') ? get_parent_title('inheritance') : get_the_title(); ?>
+			<?php 
+				if(is_parent_slug('inheritance')){
+					$title = get_parent_title('inheritance'); 
+				}else if(is_archive('review')) {
+					$title = get_the_title(39); 
+				}else{
+					$title = get_the_title(); 
+				}
+			?>
 			<h3 class="tit uk-text-center"><?= $title; ?>の相談事例と手続</h3>
 <?php
-$term_slug = is_parent_slug('inheritance') ? get_parent_slug('inheritance') : $post->post_name;
+if(is_parent_slug('inheritance')){
+	$term_slug = get_parent_slug('inheritance');
+}else if(is_archive('review')) {
+	$term_slug = get_post(39)->post_name;
+}else{
+	$term_slug = $post->post_name;
+}
 $case_post = [
 	'post_type' => 'case',
 	'posts_per_page' => 4,
