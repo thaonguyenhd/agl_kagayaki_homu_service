@@ -62,33 +62,39 @@ add_filter( 'wpcf7_validate_email*', function( $result, $tag ) {
 
 //Contact Form 7 のカスタマイズ
 function filter_wpcf7_form_tag( $scanned_tag, $replace ) {
-  if(!empty($scanned_tag)){
-    //nameで判別
-    if($scanned_tag['name'] == 'desired-job'){
-      //カスタム投稿タイプの取得
-      global $post;
-      $args = array(
-        'posts_per_page' => -1,
-        'post_type' => 'recruitment',
-        'orderby' => 'menu_order',
-        'order' => 'ASC',
-        );
-      $customPosts = get_posts($args);
-      if($customPosts){
-        foreach($customPosts as $post){
-          setup_postdata( $post );
-          $title = get_the_title();
-          //$scanned_tagに情報を追加
-          $scanned_tag['values'][] = $title;
-          $scanned_tag['labels'][] = $title;
-        }
-      }
-      wp_reset_postdata();
-    }
-  }
-  return $scanned_tag;
-};
-add_filter( 'wpcf7_form_tag', 'filter_wpcf7_form_tag', 11, 2 );
+	if(!empty($scanned_tag)){
+	  //type-service
+	  if($scanned_tag['name'] == 'type-service'){
+
+			foreach(get_field_object('field_65d83e778c5a5') ["choices"] as $i) {
+				$scanned_tag['values'][] = $i;
+				$scanned_tag['labels'][] = $i;
+			}
+			
+	  }
+		//age
+		if($scanned_tag['name'] == 'age'){
+
+			foreach(get_field_object('field_65d83f118c5a7') ["choices"] as $i) {
+				$scanned_tag['values'][] = $i;
+				$scanned_tag['labels'][] = $i;
+			}
+		}
+
+		//prefectures
+		if($scanned_tag['name'] == 'prefectures'){
+
+			foreach(get_field_object('field_65d83f8e8c5a8') ["choices"] as $i) {
+				$scanned_tag['values'][] = $i;
+				$scanned_tag['labels'][] = $i;
+			}
+		}
+		
+  	}
+	return $scanned_tag;
+  };
+
+  add_filter( 'wpcf7_form_tag', 'filter_wpcf7_form_tag', 11, 2 );
 
 // Create comment when send mail
 add_action( 'wpcf7_before_send_mail', 'add_comment_cf7'); 
@@ -119,13 +125,15 @@ function add_comment_cf7( $contact_form ) {
 
 		$data = array(
 			'type-service' => $type_service,
+			'full-name' => $full_name,
 			'age' => $customer_age,
 			'prefectures' => $prefectures,
 			'rating' => $rating,
 			'comment' => $comment,
 		);
 		update_field('infor',$data,$post_id);
-    
+
+		
 		 // Got name data
 		 $name_data = $posted_data['new_review'];
     
