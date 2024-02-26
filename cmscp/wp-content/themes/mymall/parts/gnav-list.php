@@ -37,6 +37,7 @@
 			<?php foreach ($case_cats as $case_cat) : ?>
 			<li><a href="<?= get_term_link($case_cat) ?>"><?= $case_cat->name; ?></a></li>
 			<?php endforeach; ?>
+			<li><a href="<?= home_url('review') ?>">口コミ</a></li>
 		</ul>
 	</div>
 	<?php endif; ?>

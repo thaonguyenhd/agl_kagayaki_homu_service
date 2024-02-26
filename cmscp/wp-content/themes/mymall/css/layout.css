@@ -5684,7 +5684,7 @@ address {
 
 .form-range-01 {
   --dir: right;
-  --fill: #C1A371;
+  --fill: #B19968;
   --fillbg: rgba(100, 100, 100, 0.15);
   --star: url(../img/common/star.svg);
   --stars: 4;
@@ -5701,6 +5701,7 @@ address {
   width: var(--starsize);
   height: var(--starsize);
   background: var(--symbol) no-repeat center;
+  background-size: 100%;
 }
 .form-range-01 input[type=range] {
   block-size: var(--starsize);
