@@ -125,7 +125,6 @@ function add_comment_cf7( $contact_form ) {
 
 		$data = array(
 			'type-service' => $type_service,
-			'full-name' => $full_name,
 			'age' => $customer_age,
 			'prefectures' => $prefectures,
 			'rating' => $rating,
