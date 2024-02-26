@@ -2949,6 +2949,7 @@ input[type="checkbox"] {
   .infor {
     @include font(12);
     line-height: 1.2;
+    margin-top: 10px;
     @include mq-up() {
       @include font(16);
     }
