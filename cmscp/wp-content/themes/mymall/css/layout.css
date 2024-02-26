@@ -5938,7 +5938,7 @@ input[type=checkbox] label {
 }
 @media (min-width: 960px) {
   .review-panel-01 .form-range-01 {
-    --starsize: 2rem;
+    --starsize: 4.3rem;
   }
 }
 .review-panel-01 .infor {
@@ -5953,7 +5953,7 @@ input[type=checkbox] label {
 }
 .review-panel-01 .type {
   gap: 0.6em;
-  margin-bottom: 20px;
+  margin-bottom: 12px;
   color: #222;
 }
 .review-panel-01 .type span {

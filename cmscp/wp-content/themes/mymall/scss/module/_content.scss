@@ -2938,7 +2938,7 @@ input[type="checkbox"] {
 	.form-range-01 {
 		--starsize: 1.5rem;
     @include mq-up() {
-      --starsize: 2rem;
+      --starsize: 4.3rem;
     }
 	}
   .infor {
@@ -2949,7 +2949,7 @@ input[type="checkbox"] {
   }
   .type {
     gap: .6em;
-    margin-bottom: 20px;
+    margin-bottom: 12px;
     color: #222;
     span {
       display: inline-block;
