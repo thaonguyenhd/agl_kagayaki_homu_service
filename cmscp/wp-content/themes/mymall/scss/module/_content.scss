@@ -1358,7 +1358,8 @@
 		position: relative;
 		touch-action: manipulation;
 		-webkit-appearance: none;
-		display: block;
+    height: var(--starsize);
+		outline: none;
     margin: 0;
 		&::-moz-range-track {
 			background: var(--fillbg);
@@ -1389,7 +1390,6 @@
       -webkit-appearance: none;
       box-shadow: calc(0rem - var(--w)) 0 0 var(--w) var(--fill);
 		}
-		
 	}
 }
 
@@ -1596,7 +1596,7 @@ input[type="checkbox"] {
     aspect-ratio: 1/1;
     border-radius: 50%;
     width: 45px;
-    @include mq-up() {
+    @include mq-up('l') {
       width: 90px;
     }
   }
@@ -1631,7 +1631,7 @@ input[type="checkbox"] {
   line-height: 1;
   letter-spacing: 0.1em;
   @include mq-up('l') {
-    @include font(50);
+    @include font(45);
   }
   span {
     color: #b19968;
