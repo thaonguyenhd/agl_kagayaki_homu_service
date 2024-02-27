@@ -1,208 +1,558 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width">
-	<title>◎サイトタイトル◎</title>
+  <head
+    prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#"
+  >
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>◎サイトタイトル◎</title>
 
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@1,600&family=Noto+Sans+JP:wght@400;500&family=Noto+Serif+JP:wght@400;500&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="cmscp/wp-content/themes/mymall/css/uikit.min.css">
-	<link rel="stylesheet" href="cmscp/wp-content/themes/mymall/css/layout.css">
-	<script src="cmscp/wp-content/themes/mymall/js/jquery.min.js"></script>
-	<script src="cmscp/wp-content/themes/mymall/js/uikit.min.js"></script>
-	<script src='https://kit.fontawesome.com/691b7d2716.js?ver=5.4.2' crossorigin="anonymous"></script>
-</head>
-<body>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@1,600&family=Noto+Sans+JP:wght@400;500&family=Noto+Serif+JP:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="cmscp/wp-content/themes/mymall/css/uikit.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="cmscp/wp-content/themes/mymall/css/layout.css"
+    />
+    <script src="cmscp/wp-content/themes/mymall/js/jquery.min.js"></script>
+    <script src="cmscp/wp-content/themes/mymall/js/uikit.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/691b7d2716.js?ver=5.4.2"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header id="header">
+      <div id="header-sroll">
+        <div class="logo">
+          <a href="#">
+            <img
+              class="uk-visible@s"
+              src="cmscp/wp-content/themes/mymall/img/common/logo_01.svg"
+              alt="LOGO"
+            />
+            <img
+              class="uk-hidden@s"
+              src="cmscp/wp-content/themes/mymall/img/common/logo_01_s.svg"
+              alt="LOGO"
+            />
+          </a>
+        </div>
+        <div class="group uk-flex-1 uk-visible@m">
+          <div class="uk-flex-right uk-flex-middle com-grid-15" uk-grid>
+            <span>＜相談専用ダイヤル＞</span>
+            <div>＜365日受付＞ 9:00～20:00</div>
+            <a href="tel:0120881831"
+              ><img
+                src="cmscp/wp-content/themes/mymall/img/common/tel.svg"
+                alt="0120-881-831"
+            /></a>
+          </div>
+          <nav class="gnav">
+            <ul class="uk-grid uk-flex-nowrap uk-flex-right">
+              <li><a href="#">ホーム</a></li>
+              <li><a href="#">取扱業務</a></li>
+              <li><a href="#">事務所概要</a></li>
+              <li><a href="#">アクセス</a></li>
+              <li><a href="#">相談事例と手続</a></li>
+            </ul>
+          </nav>
+        </div>
+        <a href="#" class="header-mail-01 uk-visible@m">
+          <img
+            src="cmscp/wp-content/themes/mymall/img/common/mail_white.svg"
+            alt=""
+          />お問合せ
+        </a>
+        <div
+          class="header-contact-01 uk-grid uk-grid-collapse uk-flex-right uk-hidden@m"
+        >
+          <a href="#" class="phone"
+            ><img
+              src="cmscp/wp-content/themes/mymall/img/common/ico_tel.svg"
+              alt=""
+          /></a>
+          <a href="#" class="mail"
+            ><img
+              src="cmscp/wp-content/themes/mymall/img/common/mail_white.svg"
+              alt=""
+          /></a>
+          <a href="#offcanvas" uk-toggle
+            ><img
+              src="cmscp/wp-content/themes/mymall/img/common/bar.svg"
+              alt=""
+          /></a>
+        </div>
+      </div>
+    </header>
+    <!-- /#header -->
+    <main>
+      <div class="page-tit-01 uk-grid-collapse uk-grid uk-child-width-1-2@m">
+        <figure class="uk-position-relative">
+          <img
+            class="cover"
+            src="cmscp/wp-content/themes/mymall/img/contact/kv.jpg"
+            alt=""
+          />
+        </figure>
+        <div class="info uk-flex uk-flex-middle uk-flex-center uk-flex-first@m">
+          <div>
+            <h1 class="tit">クチコミ投稿フォーム</h1>
+            <span class="text">Review Form</span>
+          </div>
+        </div>
+      </div>
+      <section id="contact-03" class="com-sec-01">
+        <div class="uk-container">
+          <p>
+            下記フォームに必要項目を入力し送信ボタンを押してください。<br />内容を確認のうえ、クチコミ一覧ページへ掲載させていただきます。
+          </p>
+          <p class="com-mt-s com-fz-12">
+            <span class="form-icon-required">必須</span
+            >が付いている項目は必須入力です
+          </p>
+          <form
+            action="/review-form#wpcf7-f277-p278-o1"
+            method="post"
+            class="wpcf7-form init"
+            aria-label="コンタクトフォーム"
+            novalidate="novalidate"
+            data-status="init"
+          >
+            <dl class="form-table-01 com-mt-s">
+              <dt class="required">依頼業務の種類<br />(複数選択可)</dt>
+              <dd>
+                <span class="wpcf7-form-control-wrap" data-name="type-service"
+                  ><span
+                    class="wpcf7-form-control wpcf7-checkbox wpcf7-validates-as-required"
+                    ><span class="wpcf7-list-item first"
+                      ><label
+                        ><input
+                          type="checkbox"
+                          name="type-service[]"
+                          value="相続手続き"
+                        /><span class="wpcf7-list-item-label"
+                          >相続手続き</span
+                        ></label
+                      ></span
+                    ><span class="wpcf7-list-item"
+                      ><label
+                        ><input
+                          type="checkbox"
+                          name="type-service[]"
+                          value="不動産登記"
+                        /><span class="wpcf7-list-item-label"
+                          >不動産登記</span
+                        ></label
+                      ></span
+                    ><span class="wpcf7-list-item"
+                      ><label
+                        ><input
+                          type="checkbox"
+                          name="type-service[]"
+                          value="会社関係"
+                        /><span class="wpcf7-list-item-label"
+                          >会社関係</span
+                        ></label
+                      ></span
+                    ><span class="wpcf7-list-item last"
+                      ><label
+                        ><input
+                          type="checkbox"
+                          name="type-service[]"
+                          value="その他"
+                        /><span class="wpcf7-list-item-label"
+                          >その他</span
+                        ></label
+                      ></span
+                    ></span
+                  ></span
+                ><small class="notice"
+                  >※相続登記のお客様は相続手続を選択してください。</small
+                >
+              </dd>
+              <dt>お名前</dt>
+              <dd>
+                <span class="wpcf7-form-control-wrap" data-name="full-name"
+                  ><input
+                    size="40"
+                    class="wpcf7-form-control wpcf7-text"
+                    aria-invalid="false"
+                    placeholder="例）鈴木一郎"
+                    value=""
+                    type="text"
+                    name="full-name" /></span
+                ><small class="notice"
+                  >※お名前はサイト上のクチコミ画面には表示されません。</small
+                >
+              </dd>
+              <dt class="required">年代</dt>
+              <dd>
+                <div class="form-select-01">
+                  <span class="wpcf7-form-control-wrap" data-name="age"
+                    ><select
+                      class="wpcf7-form-control wpcf7-select wpcf7-validates-as-required"
+                      aria-required="true"
+                      aria-invalid="false"
+                      name="age"
+                    >
+                      <option value="〜29歳">〜29歳</option>
+                      <option value="30代">30代</option>
+                      <option value="40代">40代</option>
+                      <option value="50代">50代</option>
+                      <option value="60代">60代</option>
+                      <option value="70代">70代</option>
+                      <option value="80歳〜">80歳〜</option>
+                    </select></span
+                  >
+                </div>
+              </dd>
+              <dt class="required">依頼地域</dt>
+              <dd>
+                <div class="form-select-01">
+                  <span class="wpcf7-form-control-wrap" data-name="prefectures"
+                    ><select
+                      class="wpcf7-form-control wpcf7-select wpcf7-validates-as-required"
+                      aria-required="true"
+                      aria-invalid="false"
+                      name="prefectures"
+                    >
+                      <option value="滋賀県">滋賀県</option>
+                      <option value="三重県">三重県</option>
+                      <option value="京都府">京都府</option>
+                      <option value="大阪府">大阪府</option>
+                      <option value="兵庫県">兵庫県</option>
+                      <option value="奈良県">奈良県</option>
+                      <option value="和歌山県">和歌山県</option>
+                      <option value="北海道">北海道</option>
+                      <option value="青森県">青森県</option>
+                      <option value="岩手県">岩手県</option>
+                      <option value="宮城県">宮城県</option>
+                      <option value="秋田県">秋田県</option>
+                      <option value="山形県">山形県</option>
+                      <option value="福島県">福島県</option>
+                      <option value="茨城県">茨城県</option>
+                      <option value="栃木県">栃木県</option>
+                      <option value="群馬県">群馬県</option>
+                      <option value="埼玉県">埼玉県</option>
+                      <option value="千葉県">千葉県</option>
+                      <option value="東京都">東京都</option>
+                      <option value="神奈川県">神奈川県</option>
+                      <option value="新潟県">新潟県</option>
+                      <option value="富山県">富山県</option>
+                      <option value="石川県">石川県</option>
+                      <option value="福井県">福井県</option>
+                      <option value="山梨県">山梨県</option>
+                      <option value="長野県">長野県</option>
+                      <option value="岐阜県">岐阜県</option>
+                      <option value="静岡県">静岡県</option>
+                      <option value="愛知県">愛知県</option>
+                      <option value="鳥取県">鳥取県</option>
+                      <option value="島根県">島根県</option>
+                      <option value="岡山県">岡山県</option>
+                      <option value="広島県">広島県</option>
+                      <option value="山口県">山口県</option>
+                      <option value="徳島県">徳島県</option>
+                      <option value="香川県">香川県</option>
+                      <option value="愛媛県">愛媛県</option>
+                      <option value="高知県">高知県</option>
+                      <option value="福岡県">福岡県</option>
+                      <option value="佐賀県">佐賀県</option>
+                      <option value="長崎県">長崎県</option>
+                      <option value="熊本県">熊本県</option>
+                      <option value="大分県">大分県</option>
+                      <option value="宮崎県">宮崎県</option>
+                      <option value="鹿児島県">鹿児島県</option>
+                      <option value="沖縄県">沖縄県</option>
+                    </select></span
+                  >
+                </div>
+              </dd>
+              <dt class="required">評価</dt>
+              <dd>
+                <div class="form-range-01">
+                  <span class="wpcf7-form-control-wrap" data-name="rating"
+                    ><input
+                      class="wpcf7-form-control wpcf7-range wpcf7-validates-as-required wpcf7-validates-as-number"
+                      min="1"
+                      max="5"
+                      aria-required="true"
+                      aria-invalid="false"
+                      value="3"
+                      type="range"
+                      name="rating"
+                  /></span>
+                </div>
+              </dd>
+              <dt class="required">test</dt>
+              <dd>
+                <div class="form-rating-01">
+                  <span class="wpcf7-form-control-wrap" data-name="radio-51"
+                    ><span class="wpcf7-form-control wpcf7-radio"
+                      >
+					  <span class="wpcf7-list-item first"
+                        ><label
+                          ><input
+                            type="radio"
+                            name="radio-51"
+                            value="1"
+                            checked="checked"
+                          /><span class="wpcf7-list-item-label">1</span></label
+                        ></span
+                      >
+					  <span class="wpcf7-list-item"
+                        ><label
+                          ><input type="radio" name="radio-51" value="2" /><span
+                            class="wpcf7-list-item-label"
+                            >2</span
+                          ></label
+                        ></span
+                      ><span class="wpcf7-list-item"
+                        ><label
+                          ><input type="radio" name="radio-51" value="3" /><span
+                            class="wpcf7-list-item-label"
+                            >3</span
+                          ></label
+                        ></span
+                      ><span class="wpcf7-list-item"
+                        ><label
+                          ><input type="radio" name="radio-51" value="4" /><span
+                            class="wpcf7-list-item-label"
+                            >4</span
+                          ></label
+                        ></span
+                      ><span class="wpcf7-list-item last"
+                        ><label
+                          ><input type="radio" name="radio-51" value="5" /><span
+                            class="wpcf7-list-item-label"
+                            >5</span
+                          ></label
+                        ></span
+                      ></span
+                    ></span
+                  >
+                </div>
+              </dd>
+              <dt class="required">コメント</dt>
+              <dd>
+                <span class="wpcf7-form-control-wrap" data-name="comment">
+                  <textarea
+                    cols="40"
+                    rows="10"
+                    maxlength="200"
+                    class="wpcf7-form-control wpcf7-textarea wpcf7-validates-as-required"
+                    aria-required="true"
+                    aria-invalid="false"
+                    placeholder="弊社へのコメントを入力してください。"
+                    name="comment"
+                  ></textarea></span
+                ><small class="notice">※200文字以上は入力できません。</small>
+              </dd>
+            </dl>
+            <dl class="form-table-01 first">
+              <dt class="required">個人情報の取り扱いについて</dt>
+              <dd>
+                <p>
+                  プライバシーポリシーをお読みいただき、同意の上で送信してください。
+                </p>
+                <p class="mt5">
+                  <a href="./privacy-policy" class="com-link-01"
+                    >プライバシーポリシーはこちら</a
+                  >
+                </p>
+                <p class="mt5">
+                  <span class="wpcf7-form-control-wrap" data-name="your-agree"
+                    ><span class="wpcf7-form-control wpcf7-acceptance"
+                      ><span class="wpcf7-list-item"
+                        ><label
+                          ><input
+                            type="checkbox"
+                            name="your-agree"
+                            value="1"
+                            aria-invalid="false"
+                          /><span class="wpcf7-list-item-label"
+                            >同意する</span
+                          ></label
+                        ></span
+                      ></span
+                    ></span
+                  >
+                </p>
+              </dd>
+            </dl>
+            <!-- /.form-block-01 -->
+            <input
+              class="wpcf7-form-control wpcf7-hidden"
+              value=""
+              type="hidden"
+              name="new_review"
+            />
+            <button type="submit" class="form-btn-01 uk-margin-auto com-mt-s">
+              送信する
+            </button>
+            <p style="display: none !important">
+              <label
+                >Δ<textarea
+                  name="_wpcf7_ak_hp_textarea"
+                  cols="45"
+                  rows="8"
+                  maxlength="100"
+                ></textarea></label
+              ><input
+                type="hidden"
+                id="ak_js_1"
+                name="_wpcf7_ak_js"
+                value="1709015468064"
+              />
+              <script>
+                document
+                  .getElementById("ak_js_1")
+                  .setAttribute("value", new Date().getTime());
+              </script>
+            </p>
+            <div class="wpcf7-response-output" aria-hidden="true"></div>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer id="footer">
+      <div id="footer-body">
+        <div class="uk-container">
+          <div class="com-tit-02">お問合せ･相談申込み</div>
+          <p class="com-text-01 uk-text-center">
+            土日祝・夜間も相談に対応。<br
+              class="uk-hidden@m"
+            />お気軽にご相談ください。
+          </p>
+          <div class="footer-contact-01 com-mt-s">
+            <div class="uk-container uk-container-small">
+              <div
+                class="group uk-grid uk-grid-collapse uk-grid-match uk-child-width-1-2@m"
+              >
+                <div class="item">
+                  <div class="text-justify">
+                    <div class="com-text-01">相談専用ダイヤル</div>
+                    <a href="tel:0120881831" class="tel"
+                      ><img
+                        src="cmscp/wp-content/themes/mymall/img/common/tel_white.svg"
+                        alt="0120-881-831"
+                        uk-svg
+                    /></a>
+                    <p class="com-fz-14 uk-text-center mt10">
+                      <span class="com-text-01">＜365日受付＞ 9:00～20:00</span
+                      ><br />
+                      不在の場合は担当者から折り返しご連絡いたします
+                    </p>
+                  </div>
+                </div>
+                <div class="item uk-text-center">
+                  <div class="text-justify">
+                    <a href="#" class="mail"
+                      ><img
+                        src="cmscp/wp-content/themes/mymall/img/common/mail_white.svg"
+                        alt=""
+                      />メールでご連絡</a
+                    >
+                    <p class="com-fz-14 com-mt-1em">
+                      内容を確認のうえ担当者からご連絡いたします
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="uk-grid com-grid-10 uk-flex-center uk-flex-middle com-mt-s"
+          >
+            <figure>
+              <img
+                src="cmscp/wp-content/themes/mymall/img/common/calendar_white.svg"
+                alt=""
+              />
+            </figure>
+            <div>
+              <span>土日祝・夜間も<br class="uk-hidden@m" />ご相談可能</span>
+              <p class="com-fz-18 uk-visible@m">
+                相談専用ダイヤルまたはメールにてお問合せのうえご予約ください。
+              </p>
+            </div>
+          </div>
+          <p class="uk-hidden@m text-justify com-mt-1em">
+            相談専用ダイヤルまたはメールにて<br />お問合せのうえご予約ください。
+          </p>
+        </div>
+      </div>
+      <div class="footer-breadcrumb-01">
+        <div class="uk-container">
+          <span>ホーム</span>
+          <span>相続手続</span>
+        </div>
+      </div>
+      <div class="copyright uk-container">
+        <div class="uk-flex-between com-grid-10" uk-grid>
+          <p class="com-fz-11">
+            Copyright(C) Kagayaki-houmuservice All Rights Reserved.
+          </p>
+          <div>
+            <a href="#" class="privacy">プライバシーポリシー</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- /#footer -->
 
-<header id="header">
-	<div id="header-sroll">
-		<div class="logo">
-			<a href="#">
-				<img class="uk-visible@s" src="cmscp/wp-content/themes/mymall/img/common/logo_01.svg" alt="LOGO">
-				<img class="uk-hidden@s" src="cmscp/wp-content/themes/mymall/img/common/logo_01_s.svg" alt="LOGO">
-			</a>
-		</div>
-		<div class="group uk-flex-1 uk-visible@m">
-			<div class="uk-flex-right uk-flex-middle com-grid-15" uk-grid>
-				<span>＜相談専用ダイヤル＞</span>
-				<div>＜365日受付＞ 9:00～20:00</div>
-				<a href="tel:0120881831"><img src="cmscp/wp-content/themes/mymall/img/common/tel.svg" alt="0120-881-831"></a>
-			</div>
-			<nav class="gnav">
-				<ul class="uk-grid uk-flex-nowrap uk-flex-right">
-					<li><a href="#">ホーム</a></li>
-					<li><a href="#">取扱業務</a></li>
-					<li><a href="#">事務所概要</a></li>
-					<li><a href="#">アクセス</a></li>
-					<li><a href="#">相談事例と手続</a></li>
-				</ul>
-			</nav>
-		</div>
-		<a href="#" class="header-mail-01 uk-visible@m">
-			<img src="cmscp/wp-content/themes/mymall/img/common/mail_white.svg" alt="">お問合せ
-		</a>
-		<div class="header-contact-01 uk-grid uk-grid-collapse uk-flex-right uk-hidden@m">
-			<a href="#" class="phone"><img src="cmscp/wp-content/themes/mymall/img/common/ico_tel.svg" alt=""></a>
-			<a href="#" class="mail"><img src="cmscp/wp-content/themes/mymall/img/common/mail_white.svg" alt=""></a>
-			<a href="#offcanvas" uk-toggle><img src="cmscp/wp-content/themes/mymall/img/common/bar.svg" alt=""></a>
-		</div>
-	</div>
-</header><!-- /#header --><main>
-<div class="page-tit-01 uk-grid-collapse uk-grid uk-child-width-1-2@m">
-	<figure class="uk-position-relative"><img class="cover" src="cmscp/wp-content/themes/mymall/img/contact/kv.jpg" alt=""></figure>
-	<div class="info uk-flex uk-flex-middle uk-flex-center uk-flex-first@m">
-		<div>
-			<h1 class="tit">クチコミ投稿フォーム</h1>
-			<span class="text">Review Form</span>
-		</div>
-	</div>
-</div>
-<section id="contact-03" class="com-sec-01">
-	<div class="uk-container">
-		<p>下記フォームに必要項目を入力し送信ボタンを押してください。<br>内容を確認のうえ、クチコミ一覧ページへ掲載させていただきます。</p>
-		<p class="com-mt-s com-fz-12"><span class="form-icon-required">必須</span>が付いている項目は必須入力です</p>
-		<form action="">
-			<dl class="form-table-01 com-mt-s">
-				<dt class="required">依頼業務の種類<br>(複数選択可)</dt>
-				<dd>
-					<p><span class="wpcf7-form-control-wrap" data-name="radio-132"><span class="wpcf7-form-control wpcf7-radio"><span class="wpcf7-list-item first"><label><input type="radio" name="radio-132" value="相続手続き" checked="checked"><span class="wpcf7-list-item-label">相続手続き</span></label></span><span class="wpcf7-list-item"><label><input type="radio" name="radio-132" value="不動産登記"><span class="wpcf7-list-item-label">不動産登記</span></label></span><span class="wpcf7-list-item"><label><input type="radio" name="radio-132" value="会社関係"><span class="wpcf7-list-item-label">会社関係</span></label></span><span class="wpcf7-list-item last"><label><input type="radio" name="radio-132" value="その他"><span class="wpcf7-list-item-label">その他</span></label></span></span></span></p>
-					<small class="notice">※相続登記のお客様は相続手続を選択してください。</small>
-				</dd>
-				<dt class="required">お名前</dt>
-				<dd><input type="email" placeholder="例）鈴木一郎"></dd>
-				<dt class="required">年代</dt>
-				<dd>
-					<div class="form-select-01">
-						<select>
-							<option>〜29歳</option>
-							<option>30代</option>
-							<option>40代</option>
-							<option>50代</option>
-							<option>60代</option>
-							<option>70代</option>
-							<option>80歳〜</option>
-						</select>
-					</div>
-				</dd>
-				<dt class="required">依頼地域</dt>
-				<dd>
-					<div class="form-select-01">
-						<select>
-							<option>関西</option>
-						</select>
-					</div>
-				</dd>
-				<dt class="required">★評価</dt>
-				<dd>
-					<div class="form-range-01">
-						<p><span class="wpcf7-form-control-wrap" data-name="rating"><input class="wpcf7-form-control wpcf7-range wpcf7-validates-as-required wpcf7-validates-as-number" min="1" max="5" aria-required="true" aria-invalid="false" value="3" type="range" name="rating"></span>
-						</p>
-					</div>
-				</dd>
-				<dt class="required">コメント</dt>
-				<dd>
-					<textarea placeholder="ご質問、連絡事項等ございましたらご自由にお書き下さい。"></textarea>
-				</dd>
-			</dl><!-- /.form-block-01 -->
-			<button type="submit" class="form-btn-01 uk-margin-auto com-mt-s">送信する</button>
-		</form>
-	</div>
-</section>
-</main>
-<footer id="footer">
-	<div id="footer-body">
-		<div class="uk-container">
-			<div class="com-tit-02">お問合せ･相談申込み</div>
-			<p class="com-text-01 uk-text-center">土日祝・夜間も相談に対応。<br class="uk-hidden@m">お気軽にご相談ください。</p>
-			<div class="footer-contact-01 com-mt-s">
-				<div class="uk-container uk-container-small">
-					<div class="group uk-grid uk-grid-collapse uk-grid-match uk-child-width-1-2@m">
-						<div class="item">
-							<div class="text-justify">
-								<div class="com-text-01">相談専用ダイヤル</div>
-								<a href="tel:0120881831" class="tel"><img src="cmscp/wp-content/themes/mymall/img/common/tel_white.svg" alt="0120-881-831" uk-svg></a>
-								<p class="com-fz-14 uk-text-center mt10"><span class="com-text-01">＜365日受付＞ 9:00～20:00</span><br>
-								不在の場合は担当者から折り返しご連絡いたします</p>
-							</div>
-						</div>
-						<div class="item uk-text-center">
-							<div class="text-justify">
-								<a href="#" class="mail"><img src="cmscp/wp-content/themes/mymall/img/common/mail_white.svg" alt="">メールでご連絡</a>
-								<p class="com-fz-14 com-mt-1em">内容を確認のうえ担当者からご連絡いたします</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="uk-grid com-grid-10 uk-flex-center uk-flex-middle com-mt-s">
-				<figure><img src="cmscp/wp-content/themes/mymall/img/common/calendar_white.svg" alt=""></figure>
-				<div>
-					<span>土日祝・夜間も<br class="uk-hidden@m">ご相談可能</span>
-					<p class="com-fz-18 uk-visible@m">相談専用ダイヤルまたはメールにてお問合せのうえご予約ください。</p>
-				</div>
-			</div>
-			<p class="uk-hidden@m text-justify com-mt-1em">相談専用ダイヤルまたはメールにて<br>お問合せのうえご予約ください。</p>
-		</div>
-	</div>
-	<div class="footer-breadcrumb-01">
-		<div class="uk-container">
-			<span>ホーム</span>
-			<span>相続手続</span>
-		</div>
-	</div>
-	<div class="copyright uk-container">
-		<div class="uk-flex-between com-grid-10" uk-grid>
-			<p class="com-fz-11">Copyright(C) Kagayaki-houmuservice All Rights Reserved.</p>
-			<div>
-				<a href="#" class="privacy">プライバシーポリシー</a>
-			</div>
-		</div>
-	</div>
-</footer><!-- /#footer -->
+    <div class="pagetop">
+      <a href="#" uk-scroll
+        ><img
+          src="cmscp/wp-content/themes/mymall/img/common/page-top.svg"
+          alt=""
+      /></a>
+    </div>
 
-<div class="pagetop">
-	<a href="#" uk-scroll><img src="cmscp/wp-content/themes/mymall/img/common/page-top.svg" alt=""></a>
-</div>
-
-<div id="offcanvas" uk-offcanvas="overlay: true; flip: true;">
-	<div class="uk-offcanvas-bar uk-">
-		<ul class="uk-nav-parent-icon" uk-nav>
-			<li class="uk-nav-header">MENU</li>
-			<li><a href="#">ホーム</a></li>
-			<li class="uk-parent">
-				<a href="#">取り扱い業務</a>
-				<ul class="uk-nav-sub">
-					<li><a href="#">相続手続</a></li>
-					<li><a href="#">相続・遺言無料個別相談会</a></li>
-					<li><a href="#">遺言・家族信託等</a></li>
-					<li><a href="#">不動産登記</a></li>
-					<li><a href="#">会社・法人登記</a></li>
-					<li><a href="#">債務整理</a></li>
-					<li><a href="#">裁判手続</a></li>
-					<li><a href="#">在外邦人向けサービス</a></li>
-					<li><a href="#">その他業務</a></li>
-				</ul>
-			</li>
-			<li><a href="#">相談事例と手続一覧</a></li>
-			<li class="uk-parent">
-				<a href="#">事務所概要・ごあいさつ</a>
-				<ul class="uk-nav-sub">
-					<li><a href="#">事務所概要・ごあいさつ</a></li>
-					<li><a href="#">事務所情報</a></li>
-					<li><a href="#">滋賀事務所</a></li>
-					<li><a href="#">大阪事務所</a></li>
-					<li><a href="#">採用情報</a></li>
-				</ul>
-			</li>
-			<li><a href="#">お問合せ･相談申込み</a></li>
-			<li><a href="#">プライバシーポリシー</a></li>
-			<li><a href="#">お知らせ</a></li>
-		</ul>
-	</div>
-</div><!-- #offcanvas -->
-<script src="cmscp/wp-content/themes/mymall/js/script.js"></script>
-
-</body>
+    <div id="offcanvas" uk-offcanvas="overlay: true; flip: true;">
+      <div class="uk-offcanvas-bar uk-">
+        <ul class="uk-nav-parent-icon" uk-nav>
+          <li class="uk-nav-header">MENU</li>
+          <li><a href="#">ホーム</a></li>
+          <li class="uk-parent">
+            <a href="#">取り扱い業務</a>
+            <ul class="uk-nav-sub">
+              <li><a href="#">相続手続</a></li>
+              <li><a href="#">相続・遺言無料個別相談会</a></li>
+              <li><a href="#">遺言・家族信託等</a></li>
+              <li><a href="#">不動産登記</a></li>
+              <li><a href="#">会社・法人登記</a></li>
+              <li><a href="#">債務整理</a></li>
+              <li><a href="#">裁判手続</a></li>
+              <li><a href="#">在外邦人向けサービス</a></li>
+              <li><a href="#">その他業務</a></li>
+            </ul>
+          </li>
+          <li><a href="#">相談事例と手続一覧</a></li>
+          <li class="uk-parent">
+            <a href="#">事務所概要・ごあいさつ</a>
+            <ul class="uk-nav-sub">
+              <li><a href="#">事務所概要・ごあいさつ</a></li>
+              <li><a href="#">事務所情報</a></li>
+              <li><a href="#">滋賀事務所</a></li>
+              <li><a href="#">大阪事務所</a></li>
+              <li><a href="#">採用情報</a></li>
+            </ul>
+          </li>
+          <li><a href="#">お問合せ･相談申込み</a></li>
+          <li><a href="#">プライバシーポリシー</a></li>
+          <li><a href="#">お知らせ</a></li>
+        </ul>
+      </div>
+    </div>
+    <!-- #offcanvas -->
+    <script src="cmscp/wp-content/themes/mymall/js/script.js"></script>
+  </body>
 </html>

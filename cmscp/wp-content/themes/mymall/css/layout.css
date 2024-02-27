@@ -4478,4 +4478,43 @@ input[type=checkbox] label {
 .com-rating-01 span {
   color: #b19968;
 }
+
+.form-rating-01 {
+  border: none;
+  --color: #B19968;
+}
+.form-rating-01 .wpcf7-form-control {
+  display: inline-flex;
+  flex-direction: row-reverse;
+  margin-left: -0.8em;
+}
+.form-rating-01 .wpcf7-form-control > * {
+  margin-left: 0.8em !important;
+}
+.form-rating-01 .wpcf7-list-item {
+  color: #CCCCCC;
+  line-height: 1;
+}
+.form-rating-01 .wpcf7-list-item .wpcf7-list-item-label {
+  font-size: 0;
+}
+.form-rating-01 .wpcf7-list-item .wpcf7-list-item-label:before {
+  margin: 5px;
+  font-size: 30px;
+  font-size: 1.875rem;
+  content: "★";
+  display: inline-block;
+}
+.form-rating-01 .wpcf7-list-item input {
+  display: none;
+}
+.form-rating-01 .wpcf7-list-item input:checked ~ .wpcf7-list-item-label {
+  color: var(--color);
+}
+.form-rating-01 .wpcf7-list-item:hover, .form-rating-01 .wpcf7-list-item.is-active {
+  color: var(--color);
+}
+.form-rating-01 .wpcf7-list-item:hover ~ .wpcf7-list-item, .form-rating-01 .wpcf7-list-item.is-active ~ .wpcf7-list-item {
+  color: var(--color);
+}
 /*# sourceMappingURL=layout.css.map */

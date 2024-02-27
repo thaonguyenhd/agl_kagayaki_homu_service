@@ -1647,3 +1647,46 @@ input[type="checkbox"] {
     color: #b19968;
   }
 }
+
+.form-rating-01 {
+  border: none;
+  --color: #B19968;
+  .wpcf7-form-control {
+    display: inline-flex;
+    flex-direction: row-reverse;
+    margin-left: -.8em;
+    > * {
+      margin-left: .8em!important;
+    }
+  }
+  .wpcf7-list-item {
+    // float: right;
+    color: #CCCCCC;
+    line-height: 1;
+    .wpcf7-list-item-label {
+      font-size: 0;
+      &:before {
+        margin: 5px;
+        @include font(30);
+        content: "★";
+        display: inline-block;
+      }
+    }
+    input {
+      display: none;
+      &:checked {
+        ~ .wpcf7-list-item-label {
+          color: var(--color);
+        }
+      }
+
+    }
+    &:hover, &.is-active {
+      color: var(--color);
+      ~ .wpcf7-list-item {
+        color: var(--color);
+      }
+    }  
+  }
+}
+
