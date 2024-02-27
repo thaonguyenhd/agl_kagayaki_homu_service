@@ -30,12 +30,12 @@
     document.addEventListener('wpcf7invalid', function () {
       $submit.removeClass('sending').css({'pointer-events':'auto', 'opacity':'1'});
     }, false);
-
-    // star rating input behavior
-    $('.form-rating-01 .wpcf7-list-item input:checked').closest('.wpcf7-list-item').addClass('is-active')
-    $('.form-rating-01 .wpcf7-list-item').click(function() {
-      $(this).parent().find('.is-active').removeClass('is-active')
-      $(this).addClass('is-active')
-    })
   });
+
+  // star rating input behavior
+  $('.form-rating-01 .wpcf7-list-item input:checked').closest('.wpcf7-list-item').addClass('is-active')
+  $('.form-rating-01 .wpcf7-list-item').click(function() {
+    $(this).parent().find('.is-active').removeClass('is-active')
+    $(this).addClass('is-active')
+  })
 })(jQuery);
