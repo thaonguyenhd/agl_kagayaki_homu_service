@@ -48,7 +48,7 @@
 						<ul class="type uk-flex uk-flex-wrap">
 							<?php foreach(get_field('reviews_type') as $i): ?>
 							<li>
-								<span>相続手続</span>
+								<span><?= $i ?></span>
 							</li>
 							<?php endforeach; ?>
 						</ul>
