@@ -57,7 +57,6 @@
 						<div class="uk-text-right mt10">
 							<time datetime="<?= get_the_date('Y/m/d') ?>" class="date">
 								<?= get_the_date('Y年n月j日掲載') ?>
-								<!-- 2024年2月15日掲載 -->
 							</time>
 						</div>
 					</div>
