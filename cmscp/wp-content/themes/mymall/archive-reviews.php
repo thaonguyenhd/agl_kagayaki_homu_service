@@ -3,8 +3,8 @@
 	<div class="page-tit-01 uk-flex uk-flex-wrap uk-child-width-1-2@m">
 		<figure class="img"><img src="<?= get_theme_file_uri(''); ?>/img/information/kv.jpg" alt=""></figure>
 		<div class="detail uk-container">
-			<h1 class="tit">口コミ</h1>
-			<span class="text">REVIEWS</span>
+			<h1 class="tit">クチコミ一覧</h1>
+			<span class="text">Reviews</span>
 		</div>
 	</div>
 	<div id="info-01" class="com-sec-01">
