@@ -1358,8 +1358,7 @@
 		position: relative;
 		touch-action: manipulation;
 		-webkit-appearance: none;
-    height: var(--starsize);
-		outline: none;
+		display: block;
     margin: 0;
 		&::-moz-range-track {
 			background: var(--fillbg);

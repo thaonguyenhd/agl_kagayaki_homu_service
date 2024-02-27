@@ -4183,8 +4183,7 @@ address {
   position: relative;
   touch-action: manipulation;
   -webkit-appearance: none;
-  height: var(--starsize);
-  outline: none;
+  display: block;
   margin: 0;
 }
 .form-range-01 input[type=range]::-moz-range-track {
