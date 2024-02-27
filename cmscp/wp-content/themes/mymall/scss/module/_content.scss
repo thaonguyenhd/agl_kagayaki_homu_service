@@ -1242,6 +1242,11 @@
       }
     }
   }
+  .notice {
+    display: block;
+    @include font(14);
+    margin-top: 20px;
+  }
   > dd {
     padding-bottom: 2em;
     @include mq-up(s) {

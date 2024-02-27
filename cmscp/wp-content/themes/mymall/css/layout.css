@@ -4070,6 +4070,12 @@ address {
     top: 38px;
   }
 }
+.form-table-01 .notice {
+  display: block;
+  font-size: 14px;
+  font-size: 0.875rem;
+  margin-top: 20px;
+}
 .form-table-01 > dd {
   padding-bottom: 2em;
 }
