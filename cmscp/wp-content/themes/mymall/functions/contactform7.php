@@ -113,7 +113,7 @@ function add_comment_cf7( $contact_form ) {
         // $current_post_id = $submission->get_meta('container_post_id');
         
         $new_post = array(
-			'post_type' => 'review',
+			'post_type' => 'reviews',
 			'post_title' => $rating.'/5★',
 			'post_content' => $comment,
 			'post_status' => 'draft',

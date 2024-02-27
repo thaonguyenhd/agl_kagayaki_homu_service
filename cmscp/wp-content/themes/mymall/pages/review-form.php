@@ -9,6 +9,6 @@
     <div class="uk-container">
         <p>下記フォームに必要項目を入力し送信ボタンを押してください。<br>内容を確認のうえ、クチコミ一覧ページへ掲載させていただきます。</p>
         <p class="com-mt-s com-fz-12"><span class="form-icon-required">必須</span>が付いている項目は必須入力です</p>
-        <?= do_shortcode('[contact-form-7 id="272" title="口コミフォーム"]'); ?>
+        <?= do_shortcode('[contact-form-7 id="277" title="クチコミフォーム"]'); ?>
     </div>
 </section>
