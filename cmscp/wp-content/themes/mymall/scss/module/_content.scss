@@ -1332,66 +1332,6 @@
   margin-right: 0.8em;
 }
 
-.form-range-01{
-  --dir: right;
-  --fill: #B19968;
-  --fillbg: rgba(100, 100, 100, 0.15);
-  --star: url(../img/common/star.svg);
-  --stars: 4;
-  --starsize: 3rem;
-  --symbol: var(--star);
-  --value: 1;
-  --w: calc(var(--stars) * var(--starsize));
-  --x: calc(100% * (var(--value) / var(--stars)));
-  display: flex;
-  &::before {
-    content: "";
-    display: inline-block;
-    width: var(--starsize);
-    height: var(--starsize);
-    background: var(--symbol) no-repeat center;
-    background-size: 100%;
-  }
-	input[type=range] {
-		block-size: var(--starsize);
-		inline-size: var(--w);
-		position: relative;
-		touch-action: manipulation;
-		-webkit-appearance: none;
-		display: block;
-    margin: 0;
-		&::-moz-range-track {
-			background: var(--fillbg);
-			block-size: 100%;
-			mask: repeat left center/var(--starsize) var(--symbol);
-		}
-    &::-moz-range-progress {
-			background: var(--fill);
-			block-size: 100%;
-			mask: repeat left center/var(--starsize) var(--star);
-		}
-		&::-webkit-slider-runnable-track {
-			background: var(--fillbg);
-			block-size: 100%;
-			mask: repeat left center/var(--starsize) var(--symbol);
-			-webkit-mask: repeat left center/var(--starsize) var(--symbol);
-		}
-		&::-moz-range-thumb {
-			height: var(--starsize);
-			opacity: 0;
-			width: var(--starsize);
-		}
-		&::-webkit-slider-thumb {
-			background-color: var(--fill);
-      height: var(--starsize);
-      opacity: 1;
-      width: 1px;
-      -webkit-appearance: none;
-      box-shadow: calc(0rem - var(--w)) 0 0 var(--w) var(--fill);
-		}
-	}
-}
-
 // Side by side 横並び調整用
 .wpcf7-radio,
 .wpcf7-checkbox {
