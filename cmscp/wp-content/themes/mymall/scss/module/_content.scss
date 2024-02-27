@@ -1670,6 +1670,8 @@ input[type="checkbox"] {
         @include font(30);
         content: "★";
         display: inline-block;
+        margin: 0;
+        cursor: pointer;
       }
     }
     input {

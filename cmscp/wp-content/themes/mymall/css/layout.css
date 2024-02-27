@@ -4504,6 +4504,8 @@ input[type=checkbox] label {
   font-size: 1.875rem;
   content: "★";
   display: inline-block;
+  margin: 0;
+  cursor: pointer;
 }
 .form-rating-01 .wpcf7-list-item input {
   display: none;
