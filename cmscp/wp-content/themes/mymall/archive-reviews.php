@@ -9,8 +9,9 @@
 	</div>
 	<div id="info-01" class="com-sec-01">
 		<div class="uk-container">
+			<h2 class="com-tit-03">お客様によるクチコミをご紹介</h2>
 <?php if ( have_posts() ): ?>
-			<ul class="uk-child-width-1-3@l uk-child-width-1-2@s uk-grid-match com-mt-m uk-grid" uk-grid>
+			<ul class="uk-child-width-1-2@s uk-grid-match com-mt-l uk-grid" uk-grid>
 <?php while ( have_posts() ): the_post(); ?>
 				<li>
 					<?php $infor = get_field('infor'); ?>
