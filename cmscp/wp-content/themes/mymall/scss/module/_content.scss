@@ -1629,9 +1629,11 @@ input[type="checkbox"] {
   color: rgba(100, 100, 100, 0.15);
   @include font(30);
   line-height: 1;
-  letter-spacing: 0.1em;
+  @include mq-up('s') {
+    @include font(38);
+  }
   @include mq-up('l') {
-    @include font(45);
+    @include font(55);
   }
   span {
     color: #b19968;
