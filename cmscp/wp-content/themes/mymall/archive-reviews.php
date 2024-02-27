@@ -20,16 +20,24 @@
 								<img src="<?= get_theme_file_uri() ?>/img/common/ico_user.svg" alt="" width="90" class="image">
 							</div>
 							<div>
-								<ul class="com-list-04">
+								<?php if(!empty(get_field('reviews_rating'))): ?>
+								<div class="com-rating-01">
 									<?php
 										$rating = get_field('reviews_rating');
-										for($i = 1; $i <= 5; $i++):
+										$gray_star = 5 - $rating;
 									?>
-									<li class="<?= $i <= $rating?'active':'' ?>"></li>
-									<?php
-										endfor;
-									?>
-								</ul>
+									<span>
+										<?php for($i = 1; $i <= $rating; $i++): ?>
+										★
+										<?php endfor; ?>
+									</span>
+									<?php 
+										if($gray_star > 0):
+										for($i = 1; $i <= $gray_star; $i++): ?>
+										★
+									<?php endfor;endif; ?>
+								</div>
+								<?php endif; ?>
 								<ul class="infor uk-grid-small" uk-grid>
 									<li>相談者年齢：<?= get_field('reviews_age') ?></li>
 									<li>依頼地域：<?= get_field('reviews_pref') ?></li>

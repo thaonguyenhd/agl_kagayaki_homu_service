@@ -3199,25 +3199,6 @@ address {
   margin-left: -2.3em;
 }
 
-.com-list-04 {
-  display: flex;
-  color: rgba(100, 100, 100, 0.15);
-}
-.com-list-04 li {
-  width: 1.5rem;
-  aspect-ratio: 1/1;
-  background: url(../img/common/star_02.svg) no-repeat center;
-  background-size: 100%;
-}
-@media (min-width: 960px) {
-  .com-list-04 li {
-    width: 4.3rem;
-  }
-}
-.com-list-04 li.active {
-  background-image: url(../img/common/star.svg);
-}
-
 @media (max-width: 639px) {
   .com-dl-01 {
     border-bottom: 1px solid #989898;
@@ -4461,5 +4442,22 @@ input[type=checkbox] label {
 .review-panel-01 .time {
   font-size: 16px;
   font-size: 1rem;
+}
+
+.com-rating-01 {
+  color: rgba(100, 100, 100, 0.15);
+  font-size: 30px;
+  font-size: 1.875rem;
+  line-height: 1;
+  letter-spacing: 0.1em;
+}
+@media (min-width: 1200px) {
+  .com-rating-01 {
+    font-size: 50px;
+    font-size: 3.125rem;
+  }
+}
+.com-rating-01 span {
+  color: #b19968;
 }
 /*# sourceMappingURL=layout.css.map */

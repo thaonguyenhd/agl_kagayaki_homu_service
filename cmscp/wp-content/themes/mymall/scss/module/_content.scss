@@ -505,23 +505,6 @@
   }
 }
 
-.com-list-04 {
-  display: flex;
-  color: rgba(100, 100, 100, 0.15);
-  li {
-    width: 1.5rem;
-    aspect-ratio: 1/1;
-    background: url(../img/common/star_02.svg) no-repeat center;
-    background-size: 100%;
-    @include mq-up() {
-      width: 4.3rem;
-    }
-    &.active {
-      background-image: url(../img/common/star.svg);
-    }
-  }
-}
-
 .com-dl-01 {
   // border setting
   $border: solid #989898;
@@ -1639,5 +1622,18 @@ input[type="checkbox"] {
   }
   .time {
     @include font(16);
+  }
+}
+
+.com-rating-01 {
+  color: rgba(100, 100, 100, 0.15);
+  @include font(30);
+  line-height: 1;
+  letter-spacing: 0.1em;
+  @include mq-up('l') {
+    @include font(50);
+  }
+  span {
+    color: #b19968;
   }
 }
