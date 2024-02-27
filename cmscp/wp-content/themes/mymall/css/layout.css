@@ -4433,14 +4433,6 @@ input[type=checkbox] label {
     width: 90px;
   }
 }
-.review-panel-01 .form-range-01 {
-  --starsize: 1.5rem;
-}
-@media (min-width: 960px) {
-  .review-panel-01 .form-range-01 {
-    --starsize: 4.3rem;
-  }
-}
 .review-panel-01 .infor {
   font-size: 12px;
   font-size: 0.75rem;

@@ -1617,12 +1617,6 @@ input[type="checkbox"] {
       width: 90px;
     }
   }
-	.form-range-01 {
-		--starsize: 1.5rem;
-    @include mq-up() {
-      --starsize: 4.3rem;
-    }
-	}
   .infor {
     @include font(12);
     line-height: 1.2;
