@@ -20,9 +20,16 @@
 								<img src="<?= get_theme_file_uri() ?>/img/common/ico_user.svg" alt="" width="90" class="image">
 							</div>
 							<div>
-								<div class="form-range-01">
-									<input type="range" value="<?= get_field('reviews_rating')??1 ?>" min="1" max="5" disabled>
-								</div>
+								<ul class="com-list-04">
+									<?php
+										$rating = get_field('reviews_rating');
+										for($i = 1; $i <= 5; $i++):
+									?>
+									<li class="<?= $i <= $rating?'active':'' ?>"></li>
+									<?php
+										endfor;
+									?>
+								</ul>
 								<ul class="infor uk-grid-small" uk-grid>
 									<li>相談者年齢：<?= get_field('reviews_age') ?></li>
 									<li>依頼地域：<?= get_field('reviews_pref') ?></li>

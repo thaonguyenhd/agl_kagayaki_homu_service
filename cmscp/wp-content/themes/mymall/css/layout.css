@@ -3199,6 +3199,25 @@ address {
   margin-left: -2.3em;
 }
 
+.com-list-04 {
+  display: flex;
+  color: rgba(100, 100, 100, 0.15);
+}
+.com-list-04 li {
+  width: 1.5rem;
+  aspect-ratio: 1/1;
+  background: url(../img/common/star_02.svg) no-repeat center;
+  background-size: 100%;
+}
+@media (min-width: 960px) {
+  .com-list-04 li {
+    width: 4.3rem;
+  }
+}
+.com-list-04 li.active {
+  background-image: url(../img/common/star.svg);
+}
+
 @media (max-width: 639px) {
   .com-dl-01 {
     border-bottom: 1px solid #989898;
