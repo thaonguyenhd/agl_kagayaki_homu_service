@@ -1590,7 +1590,16 @@ input[type="checkbox"] {
     padding: 40px 30px 25px;
   }
   .head {
+    display: flex;
     margin-bottom: 30px;
+    gap: 20px;
+    @include mq-up('s') {
+      flex-direction: column;
+    }
+    @include mq-up() {
+      gap: 30px;
+      flex-direction: row;
+    }
   }
   .image {
     aspect-ratio: 1/1;

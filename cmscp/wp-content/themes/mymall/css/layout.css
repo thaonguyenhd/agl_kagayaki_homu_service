@@ -4403,7 +4403,20 @@ input[type=checkbox] label {
   }
 }
 .review-panel-01 .head {
+  display: flex;
   margin-bottom: 30px;
+  gap: 20px;
+}
+@media (min-width: 640px) {
+  .review-panel-01 .head {
+    flex-direction: column;
+  }
+}
+@media (min-width: 960px) {
+  .review-panel-01 .head {
+    gap: 30px;
+    flex-direction: row;
+  }
 }
 .review-panel-01 .image {
   aspect-ratio: 1/1;

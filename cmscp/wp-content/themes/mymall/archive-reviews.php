@@ -15,7 +15,7 @@
 			<?php while ( have_posts() ): the_post(); ?>
 				<li>
 					<div class="inheritance-panel-01 review-panel-01">
-						<div class="head uk-grid-medium" uk-grid>
+						<div class="head">
 							<div>
 								<img src="<?= get_theme_file_uri() ?>/img/common/ico_user.svg" alt="" width="90" class="image">
 							</div>
