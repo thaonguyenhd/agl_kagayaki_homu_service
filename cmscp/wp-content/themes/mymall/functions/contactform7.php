@@ -89,6 +89,15 @@ function filter_wpcf7_form_tag( $scanned_tag, $replace ) {
 				$scanned_tag['labels'][] = $i;
 			}
 		}
+
+		//rating
+		if($scanned_tag['name'] == 'rating'){
+
+			foreach(get_field_object('field_65d84210ab14d') ["choices"] as $i) {
+				$scanned_tag['values'][] = $i;
+				$scanned_tag['labels'][] = $i;
+			}
+		}
 		
   	}
 	return $scanned_tag;
