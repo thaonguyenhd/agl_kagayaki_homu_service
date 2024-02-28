@@ -7,7 +7,7 @@
       "uuidString" : "F8E30215-EFC6-4C34-8AE5-B3A7FDAD2113"
     }
   ],
-  "creatorBuild" : "34484",
+  "creatorBuild" : "34564",
   "files" : {
     "\/.gitignore" : {
       "cB" : 0,
@@ -15,6 +15,14 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/.gitignore",
+      "oF" : 0
+    },
+    "\/archive-reviews.html" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/archive-reviews.html",
       "oF" : 0
     },
     "\/case.html" : {
@@ -55,6 +63,14 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/cmscp\/wp-content\/themes\/mymall\/archive-case.php",
+      "oF" : 0
+    },
+    "\/cmscp\/wp-content\/themes\/mymall\/archive-reviews.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/cmscp\/wp-content\/themes\/mymall\/archive-reviews.php",
       "oF" : 0
     },
     "\/cmscp\/wp-content\/themes\/mymall\/calculate\/css\/calculate.css" : {
@@ -126,6 +142,14 @@
       "oF" : 0,
       "pg" : 0
     },
+    "\/cmscp\/wp-content\/themes\/mymall\/css\/block-editer.css.map" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/cmscp\/wp-content\/themes\/mymall\/css\/block-editer.css.map",
+      "oF" : 0
+    },
     "\/cmscp\/wp-content\/themes\/mymall\/css\/layout.css" : {
       "aP" : 1,
       "bl" : 0,
@@ -137,6 +161,14 @@
       "oAP" : "\/cmscp\/wp-content\/themes\/mymall\/css\/layout-min.css",
       "oF" : 0,
       "pg" : 0
+    },
+    "\/cmscp\/wp-content\/themes\/mymall\/css\/layout.css.map" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/cmscp\/wp-content\/themes\/mymall\/css\/layout.css.map",
+      "oF" : 0
     },
     "\/cmscp\/wp-content\/themes\/mymall\/css\/uikit.min.css" : {
       "aP" : 1,
@@ -395,6 +427,16 @@
       "plM" : 52780316221407,
       "prP" : 0
     },
+    "\/cmscp\/wp-content\/themes\/mymall\/img\/common\/ico_user.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/cmscp\/wp-content\/themes\/mymall\/img\/common\/ico_user.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
     "\/cmscp\/wp-content\/themes\/mymall\/img\/common\/ico-page.png" : {
       "ft" : 32768,
       "iS" : 211,
@@ -532,6 +574,16 @@
       "ou" : "lpckwebp-none",
       "q" : 90,
       "rq" : 75
+    },
+    "\/cmscp\/wp-content\/themes\/mymall\/img\/common\/star.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/cmscp\/wp-content\/themes\/mymall\/img\/common\/star.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
     },
     "\/cmscp\/wp-content\/themes\/mymall\/img\/common\/tel_white.svg" : {
       "ft" : 2097152,
@@ -1321,6 +1373,14 @@
       "oAP" : "\/cmscp\/wp-content\/themes\/mymall\/pages\/registration.php",
       "oF" : 0
     },
+    "\/cmscp\/wp-content\/themes\/mymall\/pages\/review-form.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/cmscp\/wp-content\/themes\/mymall\/pages\/review-form.php",
+      "oF" : 0
+    },
     "\/cmscp\/wp-content\/themes\/mymall\/pages\/shiga.php" : {
       "cB" : 0,
       "ft" : 8192,
@@ -1855,6 +1915,14 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/residing-abroad.html",
+      "oF" : 0
+    },
+    "\/review-form.html" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/review-form.html",
       "oF" : 0
     },
     "\/souzoku.html" : {
@@ -2703,9 +2771,6 @@
       "no-new-native-nonconstructor" : {
         "active" : 0
       },
-      "no-new-object" : {
-        "active" : 0
-      },
       "no-new-symbol" : {
         "active" : 1
       },
@@ -2717,6 +2782,9 @@
       },
       "no-obj-calls" : {
         "active" : 1
+      },
+      "no-object-constructor" : {
+        "active" : 0
       },
       "no-octal" : {
         "active" : 1
@@ -2771,9 +2839,6 @@
       "no-return-assign" : {
         "active" : 0,
         "optionString" : "'except-parens'"
-      },
-      "no-return-await" : {
-        "active" : 0
       },
       "no-script-url" : {
         "active" : 0

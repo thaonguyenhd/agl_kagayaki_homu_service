@@ -1,0 +1,6 @@
+root = true
+
+[*]
+end_of_line = lf # 改行コードはLF（Linux/Unixスタイル）
+charset = utf-8 # 文字コードはUTF-8
+indent_style = tab # インデントスタイルはタブ
