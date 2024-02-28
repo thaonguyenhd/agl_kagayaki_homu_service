@@ -63,15 +63,15 @@ add_filter( 'wpcf7_validate_email*', function( $result, $tag ) {
 //Contact Form 7 のカスタマイズ
 function filter_wpcf7_form_tag( $scanned_tag, $replace ) {
 	if(!empty($scanned_tag)){
-	  //type-service
-	  if($scanned_tag['name'] == 'type-service'){
+		//type-service
+		if($scanned_tag['name'] == 'type-service'){
 
 			foreach(get_field_object('field_65d83e778c5a5') ["choices"] as $i) {
 				$scanned_tag['values'][] = $i;
 				$scanned_tag['labels'][] = $i;
 			}
 			
-	  }
+		}
 		//age
 		if($scanned_tag['name'] == 'age'){
 
@@ -104,29 +104,27 @@ function filter_wpcf7_form_tag( $scanned_tag, $replace ) {
 		
   	}
 	return $scanned_tag;
-  };
+	};
 
-  add_filter( 'wpcf7_form_tag', 'filter_wpcf7_form_tag', 11, 2 );
+	add_filter( 'wpcf7_form_tag', 'filter_wpcf7_form_tag', 11, 2 );
 
 // Create comment when send mail
 add_action( 'wpcf7_before_send_mail', 'add_comment_cf7'); 
 function add_comment_cf7( $contact_form ) { 
-    $submission = WPCF7_Submission::get_instance();
+	$submission = WPCF7_Submission::get_instance();
 	$contact_form_id = $contact_form->id;
-    if ( $submission && $contact_form_id == 277 ) {
-        
-        $posted_data = $submission->get_posted_data();
+	if ( $submission && $contact_form_id == 277 ) {
+		$posted_data = $submission->get_posted_data();
 		
 		$type_service = $posted_data['type-service']; 
 		$customer_age = $posted_data['age'];
 		$prefectures = $posted_data['prefectures'];
 		$rating = $posted_data['rating'];
 		$comment = $posted_data['comment'];
-        // $current_post_id = $submission->get_meta('container_post_id');
-        
-        $new_post = array(
+					
+		$new_post = array(
 			'post_type' => 'reviews',
-			'post_title' => $rating.'/5★',
+			'post_title' => $rating[0].'/5★',
 			'post_content' => $comment,
 			'post_status' => 'draft',
 			'post_author' => 2
@@ -134,15 +132,20 @@ function add_comment_cf7( $contact_form ) {
 
 		$post_id = wp_insert_post( $new_post );
 
+		if(is_wp_error( $post_id )) {
+			$errMsg = "レビューの送信に失敗しました。数分後にもう一度お試しください。";
+
+			$submission->set_response($cf7->message('validation_failed'));
+			$submission->set_response($cf7->filter_message($errMsg));
+
+			return;
+		}
+
 		update_field('reviews_type',$type_service,$post_id);
 		update_field('reviews_age',$customer_age,$post_id);
 		update_field('reviews_pref',$prefectures,$post_id);
 		update_field('reviews_rating',$rating,$post_id);
-
-		
-		 // Got name data
-		 $name_data = $posted_data['new_review'];
-    
+			
 		 // Do my code with this name
 		 $changed_name = get_admin_url().'/post.php?post='.$post_id.'&action=edit';
  
@@ -156,5 +159,5 @@ function add_comment_cf7( $contact_form ) {
 		 $contact_form->set_properties( array( 'mail' => $new_mail ) );
 		 
 		 return $contact_form;
-    }
+	}
 }
